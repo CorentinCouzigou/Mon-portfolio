@@ -81,13 +81,13 @@ function Accueil() {
               detectRetina: true,
             }}
           />{" "} */}
-          <div className="home__presentation_logo"> toto </div>{" "}
+          <div className="home__presentation_logo"></div>{" "}
           <div className="home__presentation__container">
             <div className="home__presentation__hello">
               <div className="home__presentation__hello__line"> </div>{" "}
               <span className="home__presentation__span">Bonjour, je suis</span>
             </div>{" "}
-            <h1 className="home__presentation__name"> Corentin Couzigou </h1>{" "}
+            <h1 className="home__presentation__name glitch" data-text="glitch" > Corentin Couzigou </h1>{" "}
             <div className="home__presentation__devContainer">
               <p className="home__presentation__dev"> Développeur </p>{" "}
               <Typewriter
@@ -115,7 +115,7 @@ function Accueil() {
             <br />
             <a href="https://drive.google.com/file/d/1yKCGihIOdV57gnlghPC1SP4WcPDF2ZHp/view?usp=sharing"><button className="home__presentation__button"> Mon CV </button></a>
           </div>{" "}
-          <div className="home__presentation__logo"> tata </div>{" "}
+          <div className="home__presentation__logo"></div>{" "}
         </div>
         <div className="home__image"></div>
       </div>{" "}

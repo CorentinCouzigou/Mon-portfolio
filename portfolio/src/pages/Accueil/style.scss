@@ -1,7 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Vampiro+One&display=swap");
 @mixin for-phone-only {
   @media (max-width: 800px) {
     @content;
   }
+}
+@mixin gitchText($offset, $text) {
+  content: $text;
+  position: absolute;
+  left: $offset;
+  top: $offset;
+  clip: rect(0, 900px, 0, 0);
+  background-color: black;
+  color: white;
+  animation: glitch 3s infinite alternate-reverse;
+  animation-delay: 4s;
 }
 .home {
   display: flex;
@@ -18,11 +30,10 @@
   overflow: hidden;
 }
 .home__image {
-  border: 1px solid pink;
   width: 50%;
   height: 80vh;
   background-image: url(../../assets/imghome.jpg);
-  filter: opacity(85%);
+  filter: opacity(80%);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -59,6 +70,11 @@
     padding: 0.4rem 0.8rem;
     margin-top: 2rem;
   }
+  &__button:hover {
+    font-family: "Vampiro One", cursive;
+    background-color: red;
+    color: black;
+  }
   &__devContainer {
     display: flex;
   }
@@ -89,6 +105,15 @@
     font-size: 5rem;
     margin: 1rem auto;
     color: white;
+    animation: fadeWhite 4s forwards;
+    animation-delay: 2s;
+    position: relative;
+    &:after {
+      @include gitchText(2px, "deepend");
+    }
+    &:before {
+      @include gitchText(-2px, "deepend");
+    }
   }
   &__dev {
     font-weight: bold;
@@ -115,4 +140,18 @@
 .Typewriter__wrapper {
   font-weight: bold;
   font-size: 2.5rem;
+}
+@keyframes fadeWhite {
+  100% {
+    color: white;
+  }
+}
+
+@keyframes glitch {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    #{percentage($i * (1 / $steps))} {
+      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+    }
+  }
 }

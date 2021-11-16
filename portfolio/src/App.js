@@ -56,8 +56,8 @@ function App() {
               color: "",
               distance: 150,
               enable: true,
-              opacity: 0.5,
-              width: 1,
+              opacity: 1,
+              width: 2,
             },
             move: {
               direction: "none",
