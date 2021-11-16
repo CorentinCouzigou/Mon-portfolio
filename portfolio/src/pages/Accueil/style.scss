@@ -1,29 +1,63 @@
-.home {
+@mixin for-phone-only {
+  @media (max-width: 800px) {
+    @content;
+  }
 }
-.home__container {
+.home {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.home__container {
+  border: 1px solid white;
+  width: 95%;
+  min-height: 80vh;
+  display: flex;
   margin-top: 1rem;
   position: relative;
+  overflow: hidden;
+}
+.home__image {
+  border: 1px solid pink;
+  width: 50%;
+  height: 80vh;
+  background-image: url(../../assets/imghome.jpg);
+  filter: opacity(85%);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 2;
+  @include for-phone-only {
+    display: none;
+  }
 }
 
 .home__presentation {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: none;
   position: relative;
   padding: 1rem;
-  border-radius: 2rem;
-  box-shadow: 1px 1px 12px black;
-  width: 90%;
-  height: 80%;
+
+  box-shadow: 1px 1px 12px white;
+  width: 50%;
+  @include for-phone-only {
+    width: 100%;
+  }
+  height: 80vh;
   font-size: 1rem;
   z-index: 2;
-  border: 1px solid red;
+
   &__button {
-    background-color: black;
+    background-color: white;
     border: none;
-    border-radius: 2rem;
-    color: white;
-    padding: 0.2rem 0.5rem;
+    font-weight: bold;
+    color: red;
+    padding: 0.4rem 0.8rem;
+    margin-top: 2rem;
   }
   &__devContainer {
     display: flex;
@@ -40,6 +74,7 @@
     width: 100%;
     display: flex;
     margin-bottom: 0.5rem;
+    font-size: 1.5rem;
     &__line {
       content: "";
       height: 3px;
@@ -51,11 +86,13 @@
   }
   &__name {
     font-weight: bold;
-    font-size: 1.57rem;
-    color: yellowgreen;
+    font-size: 5rem;
+    margin: 1rem auto;
+    color: white;
   }
   &__dev {
     font-weight: bold;
+    font-size: 2.5rem;
   }
 }
 .canvasParticles {
@@ -73,9 +110,9 @@
 .Typewriter__cursor {
   color: red;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 2.5rem;
 }
 .Typewriter__wrapper {
   font-weight: bold;
-  margin-top: -0.3rem;
+  font-size: 2.5rem;
 }

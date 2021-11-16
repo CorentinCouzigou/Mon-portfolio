@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 import React from "react";
 import "./style.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -9,7 +10,7 @@ function Accueil() {
     <div className="home">
       <div className="home__container">
         <div className="home__presentation">
-          <Particles
+          {/* <Particles
             id="tsparticles"
             canvasClassName="canvasParticles"
             className="tsparticles"
@@ -79,7 +80,7 @@ function Accueil() {
               },
               detectRetina: true,
             }}
-          />{" "}
+          />{" "} */}
           <div className="home__presentation_logo"> toto </div>{" "}
           <div className="home__presentation__container">
             <div className="home__presentation__hello">
@@ -112,10 +113,11 @@ function Accueil() {
               />{" "}
             </div>{" "}
             <br />
-            <button className="home__presentation__button"> Mon CV </button>
+            <a href="https://drive.google.com/file/d/1yKCGihIOdV57gnlghPC1SP4WcPDF2ZHp/view?usp=sharing"><button className="home__presentation__button"> Mon CV </button></a>
           </div>{" "}
           <div className="home__presentation__logo"> tata </div>{" "}
         </div>
+        <div className="home__image"></div>
       </div>{" "}
     </div>
   );
