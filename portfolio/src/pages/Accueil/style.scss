@@ -1,0 +1,81 @@
+.home {
+}
+.home__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.home__presentation {
+  position: relative;
+  padding: 1rem;
+  border-radius: 2rem;
+  box-shadow: 1px 1px 12px black;
+  width: 90%;
+  height: 80%;
+  font-size: 1rem;
+  z-index: 2;
+  border: 1px solid red;
+  &__button {
+    background-color: black;
+    border: none;
+    border-radius: 2rem;
+    color: white;
+    padding: 0.2rem 0.5rem;
+  }
+  &__devContainer {
+    display: flex;
+  }
+  &__dev {
+    margin-right: 0.4rem;
+    transform: translateY(0.1rem);
+  }
+
+  &__container {
+    padding: 1rem 0rem;
+  }
+  &__hello {
+    width: 100%;
+    display: flex;
+    margin-bottom: 0.5rem;
+    &__line {
+      content: "";
+      height: 3px;
+      width: 90px;
+      display: block;
+      background-color: red;
+      transform: translateY(0.8rem);
+    }
+  }
+  &__name {
+    font-weight: bold;
+    font-size: 1.57rem;
+    color: yellowgreen;
+  }
+  &__dev {
+    font-weight: bold;
+  }
+}
+.canvasParticles {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 2rem;
+  z-index: -1;
+}
+.tsparticles {
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+.Typewriter__cursor {
+  color: red;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.Typewriter__wrapper {
+  font-weight: bold;
+  margin-top: -0.3rem;
+}
