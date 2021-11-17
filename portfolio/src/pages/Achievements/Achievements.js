@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react';
 import "./style.scss";
+import { achievementsData } from './achievementsData';
 
 function Achievements() {
     return (
@@ -13,29 +14,19 @@ function Achievements() {
                     </div>
                 </div>
                 <div className="achievements__cards__container">
-                    <div className="card">
+                    {achievementsData.map((item) => {
+                        return (
+                            <div className="card">
+                                <img src={item.image} alt="photo" />
 
-                        <div className="card__overlay">
+                                <a className="card__overlay" href={item.link}><p>
+                                    {item.title}<br />
+                                    {item.desc}
+                                </p></a>
 
-                        </div>
-                    </div>
-                    <div className="card">
-
-                        <div className="card__overlay">
-
-                        </div>
-                    </div>
-                    <div className="card">
-                        <div className="card__overlay">
-                            <a href="https://drive.google.com/file/d/1yKCGihIOdV57gnlghPC1SP4WcPDF2ZHp/view?usp=sharing"><p>hello word</p></a>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <div className="overlay"></div>
-
-                    </div>
-
-
+                            </div>
+                        )
+                    })}
                 </div>
 
             </div>
