@@ -119,10 +119,10 @@
     animation-delay: 2s;
     position: relative;
     &:after {
-      @include gitchText(2px, "deepend");
+      @include gitchText(2px, "corentin");
     }
     &:before {
-      @include gitchText(-2px, "deepend");
+      @include gitchText(-2px, "corentin");
     }
   }
 }
@@ -159,8 +159,8 @@
 @keyframes glitch {
   $steps: 20;
   @for $i from 0 through $steps {
-    #{percentage($i * (1.5/ $steps))} {
-      clip: rect(random(150) + px, 9999px, random(80) + px, 0);
+    #{percentage($i * (1/ $steps))} {
+      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
     }
   }
 }

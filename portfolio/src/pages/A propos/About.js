@@ -1,7 +1,9 @@
 import React from 'react';
 import "./style.scss";
-import { SiReact, SiRedux, SiPostgresql, SiSequelize, SiGithub } from "react-icons/si";
+import { SiLinkedin, SiReact, SiRedux, SiPostgresql, SiSequelize, SiGithub } from "react-icons/si";
 import { FaNode, FaSass, FaGitSquare } from "react-icons/fa";
+import { GiDiploma } from "react-icons/gi";
+import { GoMortarBoard } from "react-icons/go";
 function About() {
     return (
         <div className="about">
@@ -11,8 +13,22 @@ function About() {
                         <div className="about__presentation__hello__line"> </div>{" "}
                         <span className="about__presentation__span">Qui je suis ? </span>
                     </div>
-                    <h1>lorem</h1><br />
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus laudantium quasi alias maxime exercitationem quidem, ratione culpa accusantium excepturi cum debitis modi ut doloremque eaque quia, enim cupiditate est id.</p>
+                    <div className="about__presentation__container">
+                        <div className="about__presentation__text">
+                            <h1>lorem</h1><br />
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus laudantium quasi alias maxime exercitationem quidem, ratione culpa accusantium excepturi cum debitis modi ut doloremque eaque quia, enim cupiditate est id.</p>
+                        </div>
+                        <div className="about__presentation__diploma">
+                            <div className="card__diploma">
+                                <GoMortarBoard />
+                                <span>Titre professionnel</span>
+                            </div>
+                            <div className="card__diploma">
+                                <GiDiploma />
+                                <span>Certification Opquast</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div className="about__logo">
                     <div className="about__presentation__hello">
