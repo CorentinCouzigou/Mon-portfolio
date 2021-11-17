@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Vampiro+One&display=swap");
-@mixin for-phone-only {
-  @media (max-width: 800px) {
+@import "../../assets/style";
+@mixin for-tablette {
+  @media (max-width: 900px) {
     @content;
   }
 }
@@ -10,7 +11,7 @@
   left: $offset;
   top: $offset;
   clip: rect(0, 900px, 0, 0);
-  background-color: black;
+  background-color: $background;
   color: white;
   animation: glitch 3s infinite alternate-reverse;
   animation-delay: 4s;
@@ -21,9 +22,10 @@
   align-items: center;
 }
 .home__container {
-  border: 1px solid white;
-  width: 95%;
+  border: 4px solid white;
   min-height: 80vh;
+  max-height: 80vh;
+  width: 95%;
   display: flex;
   margin-top: 1rem;
   position: relative;
@@ -38,7 +40,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 2;
-  @include for-phone-only {
+  @include for-tablette {
     display: none;
   }
 }
@@ -52,10 +54,9 @@
   background-color: none;
   position: relative;
   padding: 1rem;
-
   box-shadow: 1px 1px 12px white;
   width: 50%;
-  @include for-phone-only {
+  @include for-tablette {
     width: 100%;
   }
   height: 80vh;
@@ -72,15 +73,24 @@
   }
   &__button:hover {
     font-family: "Vampiro One", cursive;
+    border: none;
+    font-weight: bold;
+    font-size: 0.7rem;
     background-color: red;
-    color: black;
+    color: $background;
+    cursor: pointer;
   }
   &__devContainer {
     display: flex;
   }
   &__dev {
-    margin-right: 0.4rem;
-    transform: translateY(0.1rem);
+    margin-right: 0.5rem;
+    font-weight: bold;
+    font-size: 2.5rem;
+    @include for-tablette {
+      font-size: 2rem;
+      transform: translateY(0.4rem);
+    }
   }
 
   &__container {
@@ -115,10 +125,6 @@
       @include gitchText(-2px, "deepend");
     }
   }
-  &__dev {
-    font-weight: bold;
-    font-size: 2.5rem;
-  }
 }
 .canvasParticles {
   position: absolute;
@@ -140,6 +146,9 @@
 .Typewriter__wrapper {
   font-weight: bold;
   font-size: 2.5rem;
+  @include for-phone-only {
+    font-size: 2rem;
+  }
 }
 @keyframes fadeWhite {
   100% {
@@ -150,8 +159,8 @@
 @keyframes glitch {
   $steps: 20;
   @for $i from 0 through $steps {
-    #{percentage($i * (1 / $steps))} {
-      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+    #{percentage($i * (1.5/ $steps))} {
+      clip: rect(random(150) + px, 9999px, random(80) + px, 0);
     }
   }
 }

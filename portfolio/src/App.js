@@ -2,7 +2,7 @@ import Navbar from './components/Navbar/Navbar';
 import { Routes, Route, Redirect } from 'react-router-dom';
 import Home from './pages/Accueil/Accueil';
 import Reports from './pages/A propos/About';
-import Products from './pages/Réalisations/Réalisations';
+import Products from './pages/Achievements/Achievements';
 import Contact from './pages/Contact/Contact';
 import Particles from "react-tsparticles";
 import './reset.css';
@@ -53,7 +53,7 @@ function App() {
               value: "#ff0000",
             },
             links: {
-              color: "",
+              color: "#ff0000",
               distance: 150,
               enable: true,
               opacity: 1,
@@ -87,7 +87,7 @@ function App() {
       <Routes>
         <Route path='/' exact element={<Home />} />
         <Route path='/about' element={<Reports />} />
-        <Route path='/réalisations' element={<Products />} />
+        <Route path='/achievements' element={<Products />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
     </div>

@@ -60,6 +60,9 @@
 .nav-text a:hover {
   background-color: #1a83ff;
 }
+.nav-text a.active {
+  text-decoration: underline;
+}
 
 .nav-menu-items {
   width: 100%;

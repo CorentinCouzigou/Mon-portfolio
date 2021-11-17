@@ -1,5 +1,6 @@
 @mixin for-phone-only {
-    @media (max-width: 800px) {
-      @content;
-    }
+  @media (max-width: 800px) {
+    @content;
   }
+}
+$background: #060b26;

@@ -1,9 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React from "react";
 import "./style.scss";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Typewriter from "typewriter-effect";
-import Particles from "react-tsparticles";
 
 function Accueil() {
   return (
@@ -99,7 +97,7 @@ function Accueil() {
                 }}
                 onInit={(typewriter) => {
                   typewriter
-                    .typeString("Web Fullstack")
+                    .typeString("Web")
                     .pauseFor(1000)
                     .deleteAll()
                     .typeString("React")
