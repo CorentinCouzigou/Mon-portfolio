@@ -1,16 +1,33 @@
+@import "../../assets/style";
+::-webkit-scrollbar-track {
+  background-color: red;
+}
 .achievements {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.achievements::-webkit-scrollbar {
+  width: 10px;
+  color: red;
+}
+.achievements::-webkit-scrollbar-track {
+  background-color: red;
+}
+.achievements::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
 .achievements__container {
   padding: 1rem;
   margin-top: 1rem;
   width: 90%;
+  overflow: hidden;
   min-height: 80vh;
   max-height: 80vh;
   max-width: 90%;
-  overflow: auto;
+  @include for-card {
+    overflow: auto;
+  }
   border: 4px solid white;
 }
 .achivements__title {
@@ -20,6 +37,7 @@
 .achievements__presentation {
   width: 100%;
   display: flex;
+  overflow: hidden;
   margin-bottom: 0.5rem;
   font-size: 1.5rem;
   &__line {
@@ -31,5 +49,69 @@
     transform: translateY(0.8rem);
   }
   &__span {
+  }
+}
+.achievements__cards__container {
+  border: 1px solid orange;
+  margin-top: 1rem;
+  width: 100%;
+  min-height: 90%;
+  max-height: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  @include for-card {
+    overflow: auto;
+  }
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.achievements__cards__container::-webkit-scrollbar-track {
+  background-color: red;
+}
+.card {
+  overflow: hidden;
+  border: 1px solid purple;
+  width: 20rem;
+  min-height: 15rem;
+  margin: 0.5rem 0.5rem;
+  position: relative;
+  background-image: url("https://cdn.pixabay.com/photo/2021/11/11/13/08/leopard-6786267_960_720.jpg");
+  background-size: cover;
+  background-position: center;
+
+  &__image {
+  }
+  &__overlay {
+    width: 80%;
+    height: 80%;
+    transition: 0.5s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 1rem;
+    opacity: 0;
+    border: none;
+    background-color: red;
+  }
+  &__overlay:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+}
+img {
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+}
+p {
+  color: white;
+  font-size: 1rem;
+
+  a {
+    text-decoration: none;
   }
 }

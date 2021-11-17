@@ -3,4 +3,9 @@
     @content;
   }
 }
+@mixin for-card {
+  @media (max-width: 1030px) {
+    @content;
+  }
+}
 $background: #060b26;
