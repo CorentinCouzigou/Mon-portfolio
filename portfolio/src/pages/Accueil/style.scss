@@ -115,15 +115,15 @@
     font-size: 5rem;
     margin: 1rem auto;
     color: white;
-    animation: fadeWhite 4s forwards;
-    animation-delay: 2s;
-    position: relative;
-    &:after {
-      @include gitchText(2px, "corentin");
-    }
-    &:before {
-      @include gitchText(-2px, "corentin");
-    }
+    // animation: fadeWhite 4s forwards;
+    // animation-delay: 2s;
+    // position: relative;
+    // &:after {
+    //   @include gitchText(2px, "corentin");
+    // }
+    // &:before {
+    //   @include gitchText(-2px, "corentin");
+    // }
   }
 }
 .canvasParticles {

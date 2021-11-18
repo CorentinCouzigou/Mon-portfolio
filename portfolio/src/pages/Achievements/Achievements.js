@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import "./achievements.scss";
 import { achievementsData } from './achievementsData';
 
+
 function Achievements() {
     const [achievements, setAchievements] = useState(achievementsData);
-    console.log(achievements.length);
     return (
         <div className="achievements">
             <div className="achievements__container">
@@ -16,18 +16,19 @@ function Achievements() {
                     </div>
                 </div>
                 <ul className="liste">
-                    <li className={achievements.length === achievementsData.length ? "select" : ""} onClick={() => setAchievements(achievementsData)}>All</li>
-                    <li className={achievements.every(element => element.nature === "front") && "select"} onClick={() => setAchievements(achievementsData.filter(element => element.nature === "front"))}>Front</li>
-                    <li className={achievements.every(element => element.nature === "back") && "select"} onClick={() => setAchievements(achievementsData.filter(element => element.nature === "back"))}>Back
+                    <li key="all" className={achievements.length === achievementsData.length ? "select" : ""} onClick={() => setAchievements(achievementsData)}>All</li>
+                    <li key="front" className={achievements.every(element => element.nature === "front") && "select"} onClick={() => setAchievements(achievementsData.filter(element => element.nature === "front"))}>Front</li>
+                    <li key="back" className={achievements.every(element => element.nature === "back") && "select"} onClick={() => setAchievements(achievementsData.filter(element => element.nature === "back"))}>Back
                     </li>
                 </ul>
                 <div className="achievements__cards__container">
                     {achievements.map((item) => {
                         return (
-                            <div className="card">
-                                <img className="card__img" src={item.image} alt="photo" />
-                                <a className="card__overlay" href={item.link}><p>
+                            <div key={item.title} className={item.nature !== "back" ? "card" : "card back"} style={{ backgroundImage: `url(${item.image}) ` }}>
+                                {/* <img className="card__img" src={item.image} alt="photo" /> */}
+                                <a className="card__overlay" href={item.link} > <p>
                                     {item.title}<br />
+                                    <br />
                                     {item.desc}
                                 </p></a>
                             </div>
@@ -35,7 +36,7 @@ function Achievements() {
                     })}
                 </div>
 
-            </div>
+            </div >
         </div >
     )
 }

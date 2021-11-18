@@ -1,15 +1,32 @@
+import React, { useEffect, useState } from 'react';
 import Navbar from './components/Navbar/Navbar';
-import { Routes, Route, Redirect } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import Home from './pages/Accueil/Accueil';
 import Reports from './pages/A propos/About';
 import Products from './pages/Achievements/Achievements';
 import Contact from './pages/Contact/Contact';
 import Particles from "react-tsparticles";
+import Loading from './components/Loading/Loading';
 import './reset.css';
 import './App.scss';
 
 
 function App() {
+  const [loaded, setLoaded] = useState(true);
+  const navigate = useNavigate();
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoaded(false)
+    }, 1500)
+    return () => clearTimeout(timer);
+  }, [])
+  if (loaded) {
+    return (
+      <div className="App">
+        <Loading />
+      </div>
+    );
+  }
   return (
     <div className="App">
       <Navbar />
