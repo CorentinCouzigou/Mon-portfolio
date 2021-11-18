@@ -53,7 +53,6 @@
 }
 .achievements__cards__container {
   border: 1px solid orange;
-  margin-top: 1rem;
   width: 100%;
   min-height: 90%;
   max-height: 100%;
@@ -74,21 +73,25 @@
   overflow: hidden;
   border: 1px solid purple;
   width: 20rem;
-  min-height: 15rem;
+  min-height: 13rem;
   margin: 0.5rem 0.5rem;
   position: relative;
-  background-size: cover;
-  background-position: center;
 
-  &__image {
+  &__img {
+    border: 1px solid yellow;
+    width: 100%;
+    min-height: 100%;
+    transition: 0.5s ease;
+    object-fit: cover;
   }
   &__overlay {
-    width: 80%;
-    height: 80%;
+    width: 85%;
+    height: 85%;
     transition: 0.5s ease;
     position: absolute;
     top: 50%;
     left: 50%;
+    text-decoration: none;
     transform: translate(-50%, -50%);
     text-align: center;
     padding: 1rem;
@@ -101,16 +104,25 @@
     cursor: pointer;
   }
 }
-img {
-  width: 100%;
-  height: auto;
-  transition: 0.5s ease;
-}
 p {
   color: white;
   font-size: 1rem;
-
-  a {
-    text-decoration: none;
-  }
+}
+.liste {
+  width: 7rem;
+  height: 2rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+li {
+  color: white;
+}
+li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.select {
+  text-decoration: underline;
 }
