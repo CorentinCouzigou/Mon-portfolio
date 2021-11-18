@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import React, { useState } from 'react';
-import { Redirect } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+// import { schema } from '../../validation/contact';
 import './contact.scss';
 
 
@@ -12,11 +13,26 @@ function Contact() {
     const [text, setText] = useState();
     console.log("text", text);
     const [redirect, setRedirect] = useState(false);
-    if (redirect === true) {
-        const timer = setTimeout(() => {
-            return <Redirect to="/" />
-        }, 1500)
-        return () => clearTimeout(timer);
+    const redirectWhenUserClick = useRef(true);
+    console.log(redirect);
+    const navigate = useNavigate();
+    useEffect(() => {
+        if (redirectWhenUserClick.current) {
+            redirectWhenUserClick.current = false;
+            return
+        }
+        else {
+            const timer = setTimeout(() => {
+                navigate('/');
+                console.log('pas le bon endroit')
+            }, 2000)
+            return () => clearTimeout(timer);
+        }
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [redirect])
+    const handleSubmit = () => {
+
     }
     return (
         <div className="contact">
@@ -25,7 +41,7 @@ function Contact() {
                     <div className="contact__presentation__hello__line"> </div>{" "}
                     <span className="contact__presentation__span">Où me contacter ?</span>
                 </div>
-                <div className="contact__form">
+                <form className="contact__form" onSubmit={handleSubmit}>
                     <h1>Let's Talk</h1>
                     <div className="contact__form__container__field">
                         <label className="contact__form__label" htmlFor="name">Votre nom</label>
@@ -38,11 +54,10 @@ function Contact() {
                         <input value={text} onChange={(event) => setText(event.target.value)} className="contact__form__input" placeholder="Message" id="userText" type="text" />
 
                     </div>
-                    {redirect === false ? <button className="contact__form__button" type="submit" onClick={() => setRedirect(true)}>Valider</button> : <span className="contact__form__span">Votre message à bien été envoyé.</span>}
-                </div>
+                    {redirect === false ? <button className="contact__form__button" type="submit" onClick={() => setRedirect(!redirect)}>Valider</button> : <span className="contact__form__span">Votre message à bien été envoyé.</span>}
+                </form>
             </div>
         </div>
-
     )
 }
 
