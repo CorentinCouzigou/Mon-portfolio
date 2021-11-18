@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Vampiro+One&display=swap");
 @import "../../assets/style";
 @mixin for-tablette {
   @media (max-width: 900px) {
@@ -72,7 +71,7 @@
     margin-top: 2rem;
   }
   &__button:hover {
-    font-family: "Vampiro One", cursive;
+    font-family: $fontVampiro;
     border: none;
     font-weight: bold;
     font-size: 0.7rem;

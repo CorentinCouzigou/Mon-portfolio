@@ -1,6 +1,7 @@
+/* eslint-disable no-restricted-globals */
 import React, { useEffect, useState } from 'react';
 import Navbar from './components/Navbar/Navbar';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Accueil/Accueil';
 import Reports from './pages/A propos/About';
 import Products from './pages/Achievements/Achievements';
@@ -13,7 +14,11 @@ import './App.scss';
 
 function App() {
   const [loaded, setLoaded] = useState(true);
-  const navigate = useNavigate();
+  let numberParticles = 20;
+  let sizePartciles = 40;
+  if (screen.width < 600) {
+    numberParticles = 10;
+  }
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoaded(false)
@@ -27,6 +32,7 @@ function App() {
       </div>
     );
   }
+  console.log(screen.width)
   return (
     <div className="App">
       <Navbar />
@@ -56,7 +62,7 @@ function App() {
                 distance: 400,
                 duration: 2,
                 opacity: 0.8,
-                size: 40,
+                size: `${sizePartciles}`,
               },
 
               repulse: {
@@ -85,7 +91,7 @@ function App() {
               straight: false,
             },
             number: {
-              value: 20,
+              value: `${numberParticles}`,
             },
             opacity: {
               value: 0.5,

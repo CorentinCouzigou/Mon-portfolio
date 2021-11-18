@@ -68,8 +68,8 @@
 }
 .card {
   overflow: hidden;
-  border: 2px solid white;
-  box-shadow: 1px 1px 12px white;
+  border: 1px solid #1a83ff;
+  box-shadow: 1px 1px 12px 0px #1a83ff;
   width: 20rem;
   min-height: 13rem;
   margin: 0.5rem 0.5rem;
@@ -106,7 +106,7 @@
   }
 }
 .back {
-  border: 2px solid red;
+  border: 1px solid red;
   box-shadow: 1px 1px 12px red;
 }
 p {
@@ -121,14 +121,22 @@ p {
   justify-content: space-between;
   color: white;
 }
-li {
-  color: white;
-}
 li:first-child {
-  color: lightgray;
+  color: white;
+  text-decoration-color: white;
 }
+li {
+  text-decoration-color: #1a83ff;
+}
+li:hover {
+  text-decoration-color: #1a83ff;
+}
+
 li:last-child {
-  color: red;
+  text-decoration-color: red;
+}
+li:last-child:hover {
+  text-decoration-color: red;
 }
 li:hover {
   text-decoration: underline;

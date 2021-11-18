@@ -1,0 +1,103 @@
+@import "../../assets/style";
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__container {
+    border: 4px solid white;
+    width: 95%;
+    min-height: 80vh;
+    max-height: 80vh;
+    margin-top: 1rem;
+    padding: 2rem;
+  }
+  &__form {
+    margin-top: 1rem;
+    width: 100%;
+    min-height: 30rem;
+    max-height: 90%;
+    // background-color: $background;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    color: white;
+    &__container__field {
+      width: 10rem;
+      min-height: 10rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      flex-direction: column;
+      color: white;
+    }
+    &__button {
+      border: none;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      background-color: $background;
+      border: 2px solid white;
+      color: red;
+    }
+    &__span {
+      color: white;
+    }
+    &__button:hover {
+      font-family: $fontVampiro;
+      background-color: red;
+      border: 12x solid $background;
+      color: black;
+      cursor: pointer;
+    }
+    &__label {
+      color: white;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    &__input {
+      border: none;
+      width: 20rem;
+      height: 1.5rem;
+      padding: 1.5rem;
+      border-radius: 2rem;
+      margin-bottom: 1rem;
+      border: 2px solid white;
+      color: white;
+      background-color: $background;
+    }
+    &__input:hover {
+      background-color: white;
+      color: black;
+    }
+    &__input:last-child {
+      border: 4px solid orange;
+      color: red;
+    }
+  }
+}
+
+.contact__presentation {
+  width: 50%;
+  min-height: 100%;
+  padding: 1rem;
+  border-right: 4px solid white;
+
+  &__hello {
+    width: 100%;
+    display: flex;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    &__line {
+      content: "";
+      height: 3px;
+      width: 90px;
+      display: block;
+      background-color: red;
+      transform: translateY(0.8rem);
+    }
+  }
+  &__span {
+    color: white;
+  }
+}
