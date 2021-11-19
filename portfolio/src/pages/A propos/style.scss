@@ -56,9 +56,11 @@
     animation: 3.5s ease-in-out logoAnimedLeft;
     width: 100%;
     min-height: 5rem;
-
     display: flex;
     justify-content: space-around;
+  }
+  &__linkedin {
+    color: red;
   }
 }
 .card__diploma {

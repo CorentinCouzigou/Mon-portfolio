@@ -101,10 +101,10 @@ function Accueil() {
                     .pauseFor(1000)
                     .deleteAll()
                     .typeString("React")
-                    .pauseFor(2000)
+                    .pauseFor(1200)
                     .deleteAll()
                     .typeString("Node")
-                    .pauseFor(2000)
+                    .pauseFor(1200)
                     .deleteAll()
                     .start();
                 }}

@@ -17,6 +17,8 @@ function About() {
                         <div className="about__presentation__text">
                             <h1>lorem</h1><br />
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus laudantium quasi alias maxime exercitationem quidem, ratione culpa accusantium excepturi cum debitis modi ut doloremque eaque quia, enim cupiditate est id.</p>
+
+                            <a className="about__presentation__linkedin" href="https://www.linkedin.com/in/corentin-couzigou-0b200b175/"><SiLinkedin /></a>
                         </div>
                         <div className="about__presentation__diploma">
                             <div className="card__diploma">

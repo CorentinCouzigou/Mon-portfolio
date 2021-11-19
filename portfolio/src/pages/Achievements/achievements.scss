@@ -63,13 +63,10 @@
     max-height: 35rem;
   }
 }
-.achievements__cards__container::-webkit-scrollbar-track {
-  background-color: red;
-}
 .card {
   overflow: hidden;
-  border: 1px solid #1a83ff;
-  box-shadow: 1px 1px 12px 0px #1a83ff;
+  border: 0.5px solid white;
+  box-shadow: 0px 0px 10px 0px white;
   width: 20rem;
   min-height: 13rem;
   margin: 0.5rem 0.5rem;
@@ -101,14 +98,25 @@
     background-color: #1a83ff;
   }
   &__overlay:hover {
-    opacity: 0.7;
+    opacity: 0.9;
     cursor: pointer;
   }
+  &__tag {
+    width: 4rem;
+    height: 1rem;
+    font-size: 0.9rem;
+    padding: 0.2rem;
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    line-height: 10px;
+    border-radius: 0px 10px 10px 0;
+    bottom: 0.6rem;
+    left: 0;
+    background-color: white;
+  }
 }
-.back {
-  border: 1px solid red;
-  box-shadow: 1px 1px 12px red;
-}
+
 p {
   color: white;
   font-size: 1rem;
@@ -121,23 +129,11 @@ p {
   justify-content: space-between;
   color: white;
 }
-li:first-child {
-  color: white;
-  text-decoration-color: white;
-}
+
 li {
-  text-decoration-color: #1a83ff;
-}
-li:hover {
-  text-decoration-color: #1a83ff;
+  color: white;
 }
 
-li:last-child {
-  text-decoration-color: red;
-}
-li:last-child:hover {
-  text-decoration-color: red;
-}
 li:hover {
   text-decoration: underline;
   cursor: pointer;

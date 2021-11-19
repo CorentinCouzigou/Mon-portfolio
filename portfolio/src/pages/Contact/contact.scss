@@ -16,15 +16,21 @@
     width: 100%;
     min-height: 30rem;
     max-height: 90%;
-    // background-color: $background;
+    overflow: auto;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    @include for-phone-only {
+      align-items: flex-start;
+    }
     justify-content: space-around;
     flex-direction: column;
     color: white;
+    &__title {
+      font-size: 2rem;
+    }
     &__container__field {
-      width: 10rem;
-      min-height: 10rem;
+      width: 100%;
+      min-height: 15%;
       display: flex;
       justify-content: space-around;
       align-items: flex-start;
@@ -38,7 +44,9 @@
       border-radius: 50%;
       background-color: $background;
       border: 2px solid white;
+      font-size: 1rem;
       color: red;
+      font-weight: bold;
     }
     &__span {
       color: white;
@@ -46,13 +54,15 @@
     &__button:hover {
       font-family: $fontVampiro;
       background-color: red;
+      font-size: 1rem;
+      font-weight: bold;
       border: 12x solid $background;
       color: black;
       cursor: pointer;
     }
     &__label {
       color: white;
-      font-size: 1.5rem;
+      font-size: 1rem;
       margin-bottom: 0.5rem;
     }
     &__input {
@@ -66,13 +76,24 @@
       color: white;
       background-color: $background;
     }
+    &__input:nth-child(3n) {
+      min-width: 60%;
+      min-height: 11rem;
+      overflow: auto;
+      @include for-phone-only {
+        width: 100%;
+        overflow: auto;
+      }
+    }
     &__input:hover {
       background-color: white;
       color: black;
+      overflow: auto;
     }
-    &__input:last-child {
-      border: 4px solid orange;
-      color: red;
+    &__input:focus {
+      background-color: white;
+      color: black;
+      overflow: auto;
     }
   }
 }
