@@ -32,7 +32,7 @@ function App() {
       </div>
     );
   }
-  console.log(screen.width)
+
   return (
     <div className="App">
       <Navbar />

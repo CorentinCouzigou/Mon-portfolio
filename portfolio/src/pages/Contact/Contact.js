@@ -1,39 +1,55 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import { schema } from '../../validation/contact';
+import { schema } from '../../validation/contact';
 import './contact.scss';
+
 
 
 function Contact() {
     const [fullName, setFullName] = useState("");
-    console.log("name", fullName);
     const [email, setEmail] = useState("");
-    console.log("email", email);
     const [text, setText] = useState("");
-    console.log("text", text);
-    const [redirect, setRedirect] = useState(false);
-    const redirectWhenUserClick = useRef(true);
-    console.log(redirect);
+    const [messageError, setMessageError] = useState("");
     const navigate = useNavigate();
-    useEffect(() => {
-        if (redirectWhenUserClick.current) {
-            redirectWhenUserClick.current = false;
-            return
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        let errorMessage = schema.validate({
+            nom: fullName,
+            email: email,
+            message: text,
+        }).error;
+        console.log(errorMessage)
+        if (`${errorMessage}` === `ValidationError: "nom" is not allowed to be empty`) {
+            setMessageError(`Un nom est nécessaire.`);
         }
-        else {
+        else if (`${errorMessage}` === `ValidationError: "nom" must only contain alpha-numeric characters`) {
+            setMessageError(`Un nom valide est nécessaire, sans caractères spéciaux.`);
+        }
+        else if (`${errorMessage}` === `ValidationError: "email" is not allowed to be empty`) {
+            setMessageError(`Un Email est nécessaire.`);
+        }
+
+        else if (`${errorMessage}` === `ValidationError: "email" must be a valid email`) {
+            setMessageError(`Un Email valide est nécessaire.`);
+        }
+        else if (`${errorMessage}` === ` ValidationError: "message" is not allowed to be empty`) {
+            setMessageError(`Un message est nécessaire.`);
+        }
+        else if (errorMessage) {
+            setMessageError(`${errorMessage}`);
+        }
+        else if (errorMessage === undefined) {
+            setMessageError("Votre message a bien été envoyé.");
             const timer = setTimeout(() => {
                 navigate('/');
-                console.log('pas le bon endroit')
             }, 2000)
             return () => clearTimeout(timer);
-        }
-
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [redirect])
-    const handleSubmit = () => {
+        };
 
     }
+
     return (
         <div className="contact">
             <div className="contact__container">
@@ -54,7 +70,10 @@ function Contact() {
                         <textarea value={text} onChange={(event) => setText(event.target.value)} className="contact__form__input" placeholder="Message" id="userText" type="text" />
 
                     </div>
-                    {redirect === false ? <button className="contact__form__button" type="submit" onClick={() => setRedirect(!redirect)}>Valider</button> : <span className="contact__form__span">Votre message à bien été envoyé.</span>}
+                    <div className="contact__form__validation">
+                        <button className="contact__form__validation__button" type="submit">Valider</button>  <span className="contact__form__validation__span">{messageError}</span>
+                    </div>
+
                 </form>
             </div>
         </div>

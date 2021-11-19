@@ -6,6 +6,18 @@ import { achievementsData } from './achievementsData';
 
 function Achievements() {
     const [achievements, setAchievements] = useState(achievementsData);
+    let classNameForAll = "";
+    let classNameForFront = "";
+    let classNameForBack = "";
+    if (achievements.length === achievementsData.length) {
+        classNameForAll = "select";
+    }
+    if (achievements.every(element => element.nature === "Front")) {
+        classNameForFront = "select";
+    }
+    if (achievements.every(element => element.nature === "Back")) {
+        classNameForBack = "select";
+    }
     return (
         <div className="achievements">
             <div className="achievements__container">
@@ -16,15 +28,15 @@ function Achievements() {
                     </div>
                 </div>
                 <ul className="liste">
-                    <li key="All" className={achievements.length === achievementsData.length ? "select" : ""} onClick={() => setAchievements(achievementsData)}>All</li>
-                    <li key="Front" className={achievements.every(element => element.nature === "Front") && "select"} onClick={() => setAchievements(achievementsData.filter(element => element.nature === "Front"))}>Front</li>
-                    <li key="back" className={achievements.every(element => element.nature === "Back") && "select"} onClick={() => setAchievements(achievementsData.filter(element => element.nature === "Back"))}>Back
+                    <li key="All" className={classNameForAll} onClick={() => setAchievements(achievementsData)}>All</li>
+                    <li key="Front" className={classNameForFront} onClick={() => setAchievements(achievementsData.filter(element => element.nature === "Front"))}>Front</li>
+                    <li key="back" className={classNameForBack} onClick={() => setAchievements(achievementsData.filter(element => element.nature === "Back"))}>Back
                     </li>
                 </ul>
                 <div className="achievements__cards__container">
                     {achievements.map((item) => {
                         return (
-                            <div key={item.title} className="card" style={{ backgroundImage: `url(${item.image}) ` }}>
+                            <div key={item.id} className="card" style={{ backgroundImage: `url(${item.image}) ` }}>
                                 <a className="card__overlay" href={item.link}><p>
                                     {item.title}<br />
                                     <br />
