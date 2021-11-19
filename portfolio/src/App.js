@@ -8,6 +8,7 @@ import Products from './pages/Achievements/Achievements';
 import Contact from './pages/Contact/Contact';
 import Particles from "react-tsparticles";
 import Loading from './components/Loading/Loading';
+import ScrollToTop from './components/ScrollToTop.js/ScrollToTop';
 import './reset.css';
 import './App.scss';
 

@@ -52,20 +52,20 @@
         color: red;
         font-weight: bold;
       }
+      &__button:hover {
+        font-family: $fontVampiro;
+        background-color: red;
+        font-size: 1rem;
+        font-weight: bold;
+        border: 12x solid $background;
+        color: black;
+        cursor: pointer;
+      }
       &__span {
         color: white;
-        
       }
     }
-    &__button:hover {
-      font-family: $fontVampiro;
-      background-color: red;
-      font-size: 1rem;
-      font-weight: bold;
-      border: 12x solid $background;
-      color: black;
-      cursor: pointer;
-    }
+
     &__label {
       color: white;
       font-size: 1rem;
