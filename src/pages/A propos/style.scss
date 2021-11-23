@@ -1,5 +1,8 @@
 @import "../../assets/style";
-
+#about {
+  padding: 5rem 0rem;
+  min-height: 100vh;
+}
 .about {
   display: flex;
   justify-content: center;
@@ -85,6 +88,7 @@
   min-height: 100%;
   background-color: $background;
   overflow: hidden;
+  z-index: 1;
 }
 .about__logo__container {
   overflow: hidden;

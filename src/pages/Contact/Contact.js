@@ -62,7 +62,8 @@ function Contact() {
     }
 
     return (
-        <div className="contact">
+        <div id="contact">
+        <div  className="contact">
             <div className="contact__container">
                 <div className="contact__presentation__hello">
                     <div className="contact__presentation__hello__line"> </div>{" "}
@@ -87,6 +88,7 @@ function Contact() {
 
                 </form>
             </div>
+        </div>
         </div>
     )
 }

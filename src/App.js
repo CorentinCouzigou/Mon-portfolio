@@ -1,7 +1,7 @@
 /* eslint-disable no-restricted-globals */
 import React, { useEffect, useState } from 'react';
 import Navbar from './components/Navbar/Navbar';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Accueil/Accueil';
 import Reports from './pages/A propos/About';
 import Products from './pages/Achievements/Achievements';
@@ -44,7 +44,7 @@ function App() {
         className="tsparticles"
         options={{
           fullScreen: {
-            enable: false,
+            enable: true,
           },
           background: {
             color: {
@@ -109,13 +109,10 @@ function App() {
           detectRetina: true,
         }}
       />{" "}
-      <Routes>
-        <Route path='/' exact element={<Home />} />
-        <Route path='/about' element={<Reports />} />
-        <Route path='/achievements' element={<Products />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='*' element={<NotFound />} />
-      </Routes>
+      <Home />
+      <Reports />
+      <Products />
+      <Contact />
     </div>
   );
 }
