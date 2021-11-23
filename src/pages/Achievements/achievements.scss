@@ -1,0 +1,141 @@
+@import "../../assets/style";
+::-webkit-scrollbar-track {
+  background-color: red;
+}
+.achievements {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.achievements::-webkit-scrollbar {
+  width: 10px;
+  color: red;
+}
+.achievements::-webkit-scrollbar-track {
+  background-color: red;
+}
+.achievements::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.achievements__container {
+  padding: 1rem;
+  margin-top: 1rem;
+  min-height: 80vh;
+  max-height: 80vh;
+  width: 95%;
+  overflow: hidden;
+
+  border: 4px solid white;
+}
+.achivements__title {
+  color: white;
+  border-bottom: 4px solid white;
+}
+.achievements__presentation {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  &__line {
+    content: "";
+    height: 3px;
+    width: 90px;
+    display: block;
+    background-color: red;
+    transform: translateY(0.8rem);
+  }
+}
+.achievements__cards__container {
+  width: 100%;
+  min-height: 30rem;
+  max-height: 31rem;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  justify-content: space-around;
+  align-items: flex-start;
+  @include for-phone-only {
+    min-height: 35rem;
+    max-height: 35rem;
+  }
+}
+.card {
+  overflow: hidden;
+  border: 0.5px solid white;
+  box-shadow: 0px 0px 10px 0px white;
+  width: 20rem;
+  min-height: 13rem;
+  margin: 0.5rem 0.5rem;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+
+  &__img {
+    display: block;
+    width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    transition: 0.5s ease;
+    object-fit: cover;
+  }
+  &__overlay {
+    width: 85%;
+    height: 85%;
+    transition: 0.5s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-decoration: none;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 1rem;
+    opacity: 0;
+    border: none;
+    background-color: #1a83ff;
+  }
+  &__overlay:hover {
+    opacity: 0.9;
+    cursor: pointer;
+  }
+  &__tag {
+    width: 4rem;
+    height: 1rem;
+    font-size: 0.9rem;
+    padding: 0.2rem;
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    line-height: 10px;
+    border-radius: 0px 10px 10px 0;
+    bottom: 0.6rem;
+    left: 0;
+    background-color: white;
+  }
+}
+
+p {
+  color: white;
+  font-size: 1rem;
+}
+.liste {
+  width: 7rem;
+  height: 2rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+li {
+  color: white;
+}
+
+li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.select {
+  text-decoration: underline;
+}

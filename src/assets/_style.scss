@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Vampiro+One&display=swap");
+@mixin for-phone-only {
+  @media (max-width: 800px) {
+    @content;
+  }
+}
+@mixin for-card {
+  @media (max-width: 1030px) {
+    @content;
+  }
+}
+$fontVampiro: "Vampiro One", cursive;
+$background: #060b26;

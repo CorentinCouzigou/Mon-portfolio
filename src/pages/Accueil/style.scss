@@ -1,0 +1,153 @@
+@import "../../assets/style";
+@mixin for-tablette {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+@mixin gitchText($offset, $text) {
+  content: $text;
+  position: absolute;
+  left: $offset;
+  top: $offset;
+  clip: rect(0, 900px, 0, 0);
+  background-color: $background;
+  color: white;
+  animation: glitch 3s infinite alternate-reverse;
+  animation-delay: 4s;
+}
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home__container {
+  border: 4px solid white;
+  min-height: 80vh;
+  max-height: 80vh;
+  width: 95%;
+  display: flex;
+  margin-top: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.home__image {
+  width: 50%;
+  height: 80vh;
+  background-image: url(../../assets/imghome.jpg);
+  filter: opacity(90%);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 2;
+  @include for-tablette {
+    display: none;
+  }
+}
+
+.home__presentation {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: none;
+  position: relative;
+  padding: 1rem;
+  box-shadow: 1px 1px 12px white;
+  width: 50%;
+  @include for-tablette {
+    width: 100%;
+  }
+  height: 80vh;
+  font-size: 1rem;
+  z-index: 2;
+
+  &__button {
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    color: red;
+    padding: 0.4rem 0.8rem;
+    margin-top: 2rem;
+  }
+  &__button:hover {
+    font-family: $fontVampiro;
+    border: none;
+    font-weight: bold;
+    font-size: 0.7rem;
+    background-color: red;
+    color: $background;
+    cursor: pointer;
+  }
+  &__devContainer {
+    display: flex;
+  }
+  &__dev {
+    margin-right: 0.5rem;
+    font-weight: bold;
+    font-size: 2.5rem;
+    @include for-tablette {
+      font-size: 2rem;
+      transform: translateY(0.4rem);
+    }
+  }
+
+  &__container {
+    padding: 1rem 0rem;
+  }
+  &__hello {
+    width: 100%;
+    display: flex;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    &__line {
+      content: "";
+      height: 3px;
+      width: 90px;
+      display: block;
+      background-color: red;
+      transform: translateY(0.8rem);
+    }
+  }
+  &__name {
+    font-weight: bold;
+    font-size: 5rem;
+    margin: 1rem auto;
+    color: white;
+    // animation: fadeWhite 4s forwards;
+    // animation-delay: 2s;
+    // position: relative;
+    // &:after {
+    //   @include gitchText(2px, "corentin");
+    // }
+    // &:before {
+    //   @include gitchText(-2px, "corentin");
+    // }
+  }
+}
+.canvasParticles {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 2rem;
+  z-index: -1;
+}
+.tsparticles {
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+.Typewriter__cursor {
+  color: red;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+.Typewriter__wrapper {
+  font-weight: bold;
+  font-size: 2.5rem;
+  @include for-phone-only {
+    font-size: 2rem;
+  }
+}
+
+
