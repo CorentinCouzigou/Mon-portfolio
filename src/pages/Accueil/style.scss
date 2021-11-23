@@ -4,17 +4,7 @@
     @content;
   }
 }
-@mixin gitchText($offset, $text) {
-  content: $text;
-  position: absolute;
-  left: $offset;
-  top: $offset;
-  clip: rect(0, 900px, 0, 0);
-  background-color: $background;
-  color: white;
-  animation: glitch 3s infinite alternate-reverse;
-  animation-delay: 4s;
-}
+
 .home {
   display: flex;
   justify-content: center;
@@ -69,6 +59,8 @@
     color: red;
     padding: 0.4rem 0.8rem;
     margin-top: 2rem;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
   }
   &__button:hover {
     font-family: $fontVampiro;
@@ -78,6 +70,7 @@
     background-color: red;
     color: $background;
     cursor: pointer;
+    transform: translateY(-6px);
   }
   &__devContainer {
     display: flex;
@@ -114,15 +107,6 @@
     font-size: 5rem;
     margin: 1rem auto;
     color: white;
-    // animation: fadeWhite 4s forwards;
-    // animation-delay: 2s;
-    // position: relative;
-    // &:after {
-    //   @include gitchText(2px, "corentin");
-    // }
-    // &:before {
-    //   @include gitchText(-2px, "corentin");
-    // }
   }
 }
 .canvasParticles {
@@ -149,5 +133,8 @@
     font-size: 2rem;
   }
 }
-
-
+.customButton__wrap {
+  position: absolute;
+  bottom: 15%;
+  right: 10%;
+}

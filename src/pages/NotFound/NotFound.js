@@ -4,9 +4,13 @@ import './NotFound.scss';
 function NotFound() {
 
     return (
-        <div className="NotFound">
-            <span className="notFound__404">404</span>
-            <Link to="/"><span className="notfound__home">Retour à la page d'accueil</span></Link>
+        <div className="notFound">
+            <div className="notFound__container">
+                <span className="notFound__container__404">404</span>
+                <div className="wrap">
+                    <Link to="/"><button className="notFound__button">Retour à la page d'accueil</button></Link>
+                </div>
+            </div>
         </div>
     )
 }

@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React from "react";
+import { Link } from 'react-router-dom';
 import "./style.scss";
+import CustomButton from "../../components/CustomButton/CustomButton";
 import Typewriter from "typewriter-effect";
 
 function Accueil() {
@@ -8,7 +10,6 @@ function Accueil() {
     <div className="home" onScroll={() => console.log('yo')}>
       <div className="home__container">
         <div className="home__presentation">
-          <div className="home__presentation_logo"></div>{" "}
           <div className="home__presentation__container">
             <div className="home__presentation__hello">
               <div className="home__presentation__hello__line"> </div>{" "}
@@ -41,9 +42,8 @@ function Accueil() {
             </div>{" "}
             <br />
             <a href="https://drive.google.com/file/d/1yKCGihIOdV57gnlghPC1SP4WcPDF2ZHp/view?usp=sharing"><button className="home__presentation__button"> Mon CV </button></a>
-
+            {/* <CustomButton link="/about" text="En savoir plus" /> */}
           </div>{" "}
-          <div className="home__presentation__logo"></div>{" "}
         </div>
         <div className="home__image"></div>
       </div>{" "}
