@@ -2,11 +2,9 @@
 import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { schema } from '../../validation/contact';
-import { emailJsUser } from './env';
+import { emailJsUser } from './env.js';
 import emailjs from 'emailjs-com';
 import './contact.scss';
-
-
 
 function Contact() {
     const [fullName, setFullName] = useState("");

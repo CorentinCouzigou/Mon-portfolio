@@ -37,6 +37,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
   }
   &__hello {
     width: 100%;
@@ -51,6 +52,7 @@
       background-color: red;
       transform: translateY(0.8rem);
     }
+
   }
   &__diploma {
     animation: 3.5s ease-in-out logoAnimedLeft;

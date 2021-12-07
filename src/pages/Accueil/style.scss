@@ -23,10 +23,9 @@
 .home__image {
   width: 50%;
   height: 80vh;
-  background-image: url(../../assets/imghome.jpg);
-  filter: opacity(90%);
+  background-image: url(../../assets/images/imgHomePAge.jpg);
   background-position: center;
-  background-size: cover;
+  background-size:cover;
   background-repeat: no-repeat;
   z-index: 2;
   @include for-tablette {
@@ -59,18 +58,17 @@
     color: red;
     padding: 0.4rem 0.8rem;
     margin-top: 2rem;
-    border-radius: 2rem;
     padding: 0.5rem 1rem;
+    font-size: 1rem;
   }
   &__button:hover {
     font-family: $fontVampiro;
     border: none;
     font-weight: bold;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     background-color: red;
     color: $background;
     cursor: pointer;
-    transform: translateY(-6px);
   }
   &__devContainer {
     display: flex;
