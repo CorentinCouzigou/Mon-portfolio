@@ -51,14 +51,23 @@ export const achievementsData = [
     },
     {
         id: 7,
-        title: 'ChatRoom',
-        desc: "Messagerie instantanée avec Websocket",
-        image: require('../../assets/images/chatRoom.png').default,
-        link: "https://github.com/CorentinCouzigou/S6--REACT--Chatroom--reactDom-redux-proptypes",
+        title: 'My To-do-list',
+        desc: "To-do-list en javascript avec Drag and Drop sans l'utilisation de bibliothèque",
+        image: require('../../assets/images/todolist.png').default,
+        link: "https://github.com/CorentinCouzigou/to-do-list-front-V2",
         nature: "Front",
     },
     {
         id: 8,
+        title: 'My To-do-list',
+        desc: "To-do-list Côté back avec stockage des stages dans un fichier Json",
+        image: require('../../assets/images/todolist.png').default,
+        link: "https://github.com/CorentinCouzigou/to-do-list-back",
+        nature: "Back",
+    },
+
+    {
+        id: 9,
         title: 'Converter',
         desc: "Converter en euros avec la device de votre choix.",
         image: require('../../assets/images/converter.png').default,

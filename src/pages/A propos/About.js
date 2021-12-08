@@ -17,11 +17,11 @@ function About() {
                     <div className="about__presentation__container">
                         <div className="about__presentation__text">
                             <h1>Mon parcours</h1><br />
-                            <p>Après 8 années passées dans le monde de la santé en tant qu'infirmier, où j'ai pu développer mon goût pour le travail d'équipe , ainsi qu'une rigueur dans mon travail,  j'ai décidé de prendre un nouveau cap professionnel.</p>
+                            <p>Après 8 années passées dans le monde de la santé, où j'ai pu développer mon goût pour le travail d'équipe , et une rigueur dans mon travail; j'ai décidé de prendre un nouveau cap professionnel.</p>
                             <br />
                             <p>Ma passion pour l'informatique que j'ai depuis tout jeune et ma curiosité d'esprit , m'ont permis de transformer cette passion en métier.</p>
                             <br />
-                            <p>J'ai donc réalisé une reconversion professionnelle à l'école du numérique O'clock. Après ces 6 mois de formations intensives, j'en ressors avec un niveau de Développeur Junior.</p>
+                            <p>J'ai donc réalisé une reconversion professionnelle à l'école du numérique O'clock. Après ces 6 mois de formations intensives, j'en ressors avec un niveau de Développeur Junior Front et Back.</p>
                             <br />
                             <p>Désireux d'enrichir constamment mes connaissances, je souhaite mettre mes compétences  au sein d'une équipe dynamique.</p>
                             <br />

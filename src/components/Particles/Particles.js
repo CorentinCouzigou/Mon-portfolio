@@ -1,6 +1,6 @@
 import React from 'react';
 import Particles from "react-tsparticles";
-
+import './Particles.scss';
 function ParticlesComponent() {
     let numberParticles = 28;
     let sizeParticles = 40;

@@ -2,7 +2,6 @@
 import React from "react";
 import "./style.scss";
 import CustomButton from "../../components/CustomButton/CustomButton";
-import { MdOutlineArrowForwardIos } from "react-icons/md";
 import Typewriter from "typewriter-effect";
 
 function Accueil() {

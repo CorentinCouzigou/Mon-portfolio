@@ -19,7 +19,6 @@
 }
 .achievements__container {
   padding: 1rem;
-  margin-top: 1rem;
   min-height: 80vh;
   max-height: 80vh;
   width: 95%;
@@ -76,8 +75,8 @@
     object-fit: cover;
   }
   &__overlay {
-    width: 85%;
-    height: 85%;
+    width: 90%;
+    height: 90%;
     transition: 0.5s ease;
     position: absolute;
     top: 50%;
