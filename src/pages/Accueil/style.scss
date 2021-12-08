@@ -55,21 +55,20 @@
     background-color: white;
     border: none;
     font-weight: bold;
-    color: red;
+    color: $background;
     padding: 0.4rem 0.8rem;
     margin-top: 2rem;
     padding: 0.5rem 1rem;
     font-size: 1rem;
-  }
-  &__button:hover {
-    font-family: $fontVampiro;
-    border: none;
-    font-weight: bold;
-    font-size: 0.8rem;
-    background-color: red;
-    color: $background;
+    transform: skewX(-0.06turn);
+    box-shadow: 6px 6px 0 red;
     cursor: pointer;
+    &:hover {
+      background-color: red;
+      color: $background;
+    }
   }
+
   &__devContainer {
     display: flex;
   }
@@ -107,6 +106,7 @@
     color: white;
   }
 }
+
 .canvasParticles {
   position: absolute;
   top: 0px;
@@ -135,4 +135,22 @@
   position: absolute;
   bottom: 15%;
   right: 10%;
+}
+.wrapper__customButton__home{
+width: 100%;
+display: flex;
+padding: 0rem 1.5rem;
+justify-content: flex-end;
+}
+
+@keyframes color_anim {
+  0% {
+      fill:$background;
+  }
+  50% {
+      fill: white;
+  }
+  100% {
+      fill: $background;
+  }
 }

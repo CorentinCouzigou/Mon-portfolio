@@ -53,20 +53,6 @@
   position: relative;
   padding: 10px;
 }
-// .notFound__button::before {
-//   content: "";
-//   border-radius: 1000px;
-//   min-width: calc(300px + 12px);
-//   min-height: calc(60px + 12px);
-//   border: 6px solid #00ffcb;
-//   box-shadow: 0 0 60px rgba(0, 255, 203, 0.64);
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   opacity: 0;
-//   transition: all 0.3s ease-in-out 0s;
-// }
 
 .notFound__button:hover,
 .notFound__button:focus {
@@ -99,15 +85,15 @@
   display: none;
 }
 
-// @keyframes ring {
-//   0% {
-//     width: 2rem;
-//     height: 2rem;
-//     opacity: 1;
-//   }
-//   100% {
-//     width: 15rem;
-//     height: 15rem;
-//     opacity: 0;
-//   }
-// }
+@keyframes ring {
+  0% {
+    width: 2rem;
+    height: 2rem;
+    opacity: 1;
+  }
+  100% {
+    width: 15rem;
+    height: 15rem;
+    opacity: 0;
+  }
+}

@@ -48,18 +48,13 @@
 }
 .achievements__cards__container {
   width: 100%;
-  min-height: 30rem;
-  max-height: 31rem;
+  height: 65vh;
   padding: 1rem;
   display: flex;
   flex-wrap: wrap;
   overflow: auto;
   justify-content: space-around;
   align-items: flex-start;
-  @include for-phone-only {
-    min-height: 35rem;
-    max-height: 35rem;
-  }
 }
 .card {
   overflow: hidden;

@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React from "react";
-import { Link } from 'react-router-dom';
 import "./style.scss";
 import CustomButton from "../../components/CustomButton/CustomButton";
+import { MdOutlineArrowForwardIos } from "react-icons/md";
 import Typewriter from "typewriter-effect";
 
 function Accueil() {
@@ -42,8 +42,10 @@ function Accueil() {
             </div>{" "}
             <br />
             <a href="https://drive.google.com/file/d/1yKCGihIOdV57gnlghPC1SP4WcPDF2ZHp/view?usp=sharing"><button className="home__presentation__button"> Mon CV </button></a>
-            {/* <CustomButton link="/about" text="En savoir plus" /> */}
           </div>{" "}
+          <div className="wrapper__customButton__home">
+            <CustomButton link="/about" text="En savoir plus" />
+          </div>
         </div>
         <div className="home__image"></div>
       </div>{" "}

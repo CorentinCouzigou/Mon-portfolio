@@ -4,6 +4,7 @@ import { SiLinkedin, SiReact, SiRedux, SiPostgresql, SiSequelize, SiGithub, SiMo
 import { FaNode, FaSass } from "react-icons/fa";
 import { GiDiploma } from "react-icons/gi";
 import { GoMortarBoard } from "react-icons/go";
+import CustomButton from "../../components/CustomButton/CustomButton";
 function About() {
     return (
         <div className="about">
@@ -26,6 +27,9 @@ function About() {
                             <br />
                             <a className="about__presentation__linkedin" href="https://www.linkedin.com/in/corentin-couzigou-0b200b175/"><SiLinkedin /></a>
                         </div>
+                        <div className="wrapper__customButton__about">
+                            <CustomButton link="/achievements" text="Mes réalisations" positionX={4} positionY={10} />
+                        </div>
                         <div className="about__presentation__diploma">
                             <a href="#" className="card__diploma">
                                 <GoMortarBoard />
@@ -37,6 +41,7 @@ function About() {
                             </a>
                         </div>
                     </div>
+
                 </div>
                 <div className="about__logo">
                     <div className="about__presentation__hello">
