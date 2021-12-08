@@ -6,8 +6,6 @@ import emailjs from 'emailjs-com';
 import './contact.scss';
 
 function Contact() {
-    console.log(process.env);
-    console.log(process.env.REACT_APP_EMAILJS_SERVICE_ID);
     const [fullName, setFullName] = useState("");
     const [email, setEmail] = useState("");
     const [text, setText] = useState("");
