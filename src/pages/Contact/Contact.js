@@ -2,11 +2,12 @@
 import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { schema } from '../../validation/contact';
-import { emailJsUser } from './env.js';
 import emailjs from 'emailjs-com';
 import './contact.scss';
 
 function Contact() {
+    console.log(process.env);
+    console.log(process.env.REACT_APP_EMAILJS_SERVICE_ID);
     const [fullName, setFullName] = useState("");
     const [email, setEmail] = useState("");
     const [text, setText] = useState("");
@@ -36,14 +37,14 @@ function Contact() {
         else if (`${errorMessage}` === `ValidationError: "email" must be a valid email`) {
             setMessageError(`Un Email valide est nécessaire.`);
         }
-        else if (`${errorMessage}` === ` ValidationError: "message" is not allowed to be empty`) {
+        else if (`${errorMessage}` === `ValidationError: "message" is not allowed to be empty`) {
             setMessageError(`Un message est nécessaire.`);
         }
         else if (errorMessage) {
             setMessageError(`${errorMessage}`);
         }
         else if (errorMessage === undefined) {
-            emailjs.sendForm(emailJsUser.YOUR_SERVICE_ID, emailJsUser.YOUR_TEMPLATE_ID, form.current, emailJsUser.YOUR_USER_ID).then(function (response) {
+            emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, form.current, process.env.REACT_APP_EMAILJS_USER_ID).then(function (response) {
                 console.log("SUCCES !", response.status, response.text)
                 setMessageError("Votre message a bien été envoyé.");
                 const timer = setTimeout(() => {

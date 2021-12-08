@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import "./achievements.scss";
 import { achievementsData } from './achievementsData';
-
+import CustomButton from "../../components/CustomButton/CustomButton";
 
 function Achievements() {
     const [achievements, setAchievements] = useState(achievementsData);
@@ -33,6 +33,9 @@ function Achievements() {
                     <li key="back" className={classNameForBack} onClick={() => setAchievements(achievementsData.filter(element => element.nature === "Back"))}>Back
                     </li>
                 </ul>
+                <div className="wrapper__customButton__contact">
+                    <CustomButton link="/contact" text="Me contacter" />
+                </div>
                 <div className="achievements__cards__container">
                     {achievements.map((item) => {
                         return (

@@ -32,6 +32,7 @@
   border-right: 4px solid white;
   color: white;
   position: relative;
+  overflow: auto;
   &__container {
     width: 100%;
     min-height: 95%;
@@ -82,15 +83,15 @@
   @include for-phone-only {
     width: 100%;
   }
+  overflow: auto;
   color: white;
   padding: 1rem;
   width: 50%;
   min-height: 100%;
   background-color: $background;
-  overflow: hidden;
+  
 }
 .about__logo__container {
-  overflow: hidden;
   width: 100%;
   max-height: 100%;
   display: flex;
