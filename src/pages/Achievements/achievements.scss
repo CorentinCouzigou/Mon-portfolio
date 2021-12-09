@@ -1,6 +1,6 @@
 @import "../../assets/style";
 ::-webkit-scrollbar-track {
-  background-color: red;
+  background-color: $colorAlpha;
 }
 .achievements {
   display: flex;
@@ -9,10 +9,10 @@
 }
 .achievements::-webkit-scrollbar {
   width: 10px;
-  color: red;
+  color: $colorAlpha;
 }
 .achievements::-webkit-scrollbar-track {
-  background-color: red;
+  background-color: $colorAlpha;
 }
 .achievements::-webkit-scrollbar-thumb {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -41,7 +41,7 @@
     height: 3px;
     width: 90px;
     display: block;
-    background-color: red;
+    background-color: $colorAlpha;
     transform: translateY(0.8rem);
   }
 }
@@ -87,7 +87,7 @@
     padding: 1rem;
     opacity: 0;
     border: none;
-    background-color: #1a83ff;
+    background-color: $colorOmega;
   }
   &__overlay:hover {
     opacity: 0.9;

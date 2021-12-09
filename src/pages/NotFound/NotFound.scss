@@ -38,15 +38,15 @@
   letter-spacing: 1.3px;
   font-weight: 700;
   color: #313133;
-  background: #4fd1c5;
+  background: $colorAlpha;
   background: linear-gradient(
     90deg,
-    rgba(129, 230, 217, 1) 0%,
-    rgba(79, 209, 197, 1) 100%
+    rgba(241, 136, 5, 1) 0%,
+    rgba(241, 136, 5, 1) 100%
   );
   border: none;
   border-radius: 2rem;
-  box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
+  box-shadow: 12px 12px 24px rgba(246, 136, 5, 0.64);
   transition: all 0.3s ease-in-out 0s;
   cursor: pointer;
   outline: none;
@@ -70,7 +70,7 @@
   width: 1rem;
   height: 1rem;
   border-radius: 100%;
-  border: 6px solid #00ffcb;
+  border: 6px solid $colorAlpha;
   position: absolute;
   z-index: -1;
   top: 50%;

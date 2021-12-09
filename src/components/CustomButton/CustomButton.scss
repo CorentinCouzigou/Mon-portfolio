@@ -10,7 +10,7 @@
   padding: 0.5rem 1rem;
   font-size: 1rem;
   transform: skewX(-0.06turn);
-  box-shadow: 6px 6px 0 red;
+  box-shadow: 6px 6px 0 $colorAlpha;
   cursor: pointer;
   &__link{
     text-decoration: none;
@@ -18,9 +18,10 @@
   &--seeMore {
     margin-top: 0rem;
     display:flex;
-    background-color: red;
-    box-shadow: 6px 6px 0 white;
+    background-color:	white;
+    box-shadow: 6px 6px 0 $colorAlpha;
     &:hover{
+      background-color:	$colorAlpha;
     }
     &:hover .wrapper__arrow .arrow--1{
       transform: translateX(+50%);

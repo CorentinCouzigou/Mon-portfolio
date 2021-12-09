@@ -25,13 +25,14 @@
   @include for-phone-only {
     width: 100%;
     border-right: none;
+    overflow: auto;
   }
   min-height: 100%;
   padding: 1rem;
   border-right: 4px solid white;
   color: white;
   position: relative;
-  overflow: auto;
+  overflow: hidden;
   &__container {
     width: 100%;
     min-height: 95%;
@@ -50,7 +51,7 @@
       height: 3px;
       width: 90px;
       display: block;
-      background-color: red;
+      background-color: $colorAlpha;
       transform: translateY(0.8rem);
     }
 
@@ -63,7 +64,7 @@
     justify-content: space-around;
   }
   &__linkedin {
-    color: red;
+    color: $colorAlpha;
   }
 }
 .card__diploma {
@@ -72,7 +73,7 @@
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  color: red;
+  color: $colorAlpha;
 }
 .card__diploma > span {
   font-size: 1rem;
@@ -104,14 +105,14 @@
 
   &__image1 {
     font-size: 5rem;
-    color: red;
+    color: $colorAlpha;
     padding: 1rem;
     animation: 1.5s linear logoAnimedLeft;
     text-align: center;
   }
   &__image2 {
     font-size: 5rem;
-    color: red;
+    color: $colorAlpha;
     padding: 1rem;
     animation: 1.5s linear logoAnimedRight;
     text-align: center;

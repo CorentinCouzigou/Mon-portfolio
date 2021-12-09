@@ -60,10 +60,10 @@
     padding: 0.5rem 1rem;
     font-size: 1rem;
     transform: skewX(-0.06turn);
-    box-shadow: 6px 6px 0 red;
+    box-shadow: 6px 6px 0 $colorAlpha;
     cursor: pointer;
     &:hover {
-      background-color: red;
+      background-color: $colorAlpha;
       color: $background;
     }
   }
@@ -94,7 +94,7 @@
       height: 3px;
       width: 90px;
       display: block;
-      background-color: red;
+      background-color: $colorAlpha;
       transform: translateY(0.8rem);
     }
   }
@@ -119,7 +119,7 @@
   height: 100%;
 }
 .Typewriter__cursor {
-  color: red;
+  color: $colorAlpha;
   font-weight: bold;
   font-size: 2.5rem;
 }

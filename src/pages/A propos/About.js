@@ -31,7 +31,7 @@ function About() {
                             <CustomButton link="/achievements" text="Mes réalisations" positionX={4} positionY={10} />
                         </div>
                         <div className="about__presentation__diploma">
-                            <a href="#" className="card__diploma">
+                            <a href="https://drive.google.com/file/d/1iKg3pppDYhVZ3DqR8yXVot6gId3h8X9_/view?usp=sharing" className="card__diploma">
                                 <GoMortarBoard />
                                 <span>Titre professionnel</span>
                             </a>

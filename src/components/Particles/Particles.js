@@ -46,10 +46,10 @@ function ParticlesComponent() {
                     },
                     particles: {
                         color: {
-                            value: "#ff0000",
+                            value: "#514434",
                         },
                         links: {
-                            color: "#ff0000",
+                            color: "#514434",
                             distance: 150,
                             enable: true,
                             opacity: 1,
