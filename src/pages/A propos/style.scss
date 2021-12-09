@@ -81,9 +81,11 @@
 }
 .about__logo {
   @include for-phone-only {
+    overflow: auto;
     width: 100%;
   }
-  overflow: auto;
+  
+  overflow: hidden;
   color: white;
   padding: 1rem;
   width: 50%;
