@@ -9,6 +9,11 @@
     @content;
   }
 }
+@mixin for-tablette {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
 $fontVampiro: "Vampiro One", cursive;
 $background: #060b26;
 $colorAlpha: #f18805;

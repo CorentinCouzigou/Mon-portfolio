@@ -25,8 +25,10 @@
   @include for-phone-only {
     width: 100%;
     border-right: none;
-    overflow: auto;
+    overflow-y: auto;
   }
+
+  overflow-x: hidden;
   min-height: 100%;
   padding: 1rem;
   border-right: 4px solid white;
@@ -81,11 +83,11 @@
 }
 .about__logo {
   @include for-phone-only {
-    overflow: auto;
+
     width: 100%;
   }
   
-  overflow: hidden;
+  overflow-x: hidden;
   color: white;
   padding: 1rem;
   width: 50%;

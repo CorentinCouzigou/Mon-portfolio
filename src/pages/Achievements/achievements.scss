@@ -87,7 +87,7 @@
     padding: 1rem;
     opacity: 0;
     border: none;
-    background-color: $colorOmega;
+    background-color: $colorAlpha;
   }
   &__overlay:hover {
     opacity: 0.9;
@@ -105,6 +105,7 @@
     border-radius: 0px 10px 10px 0;
     bottom: 0.6rem;
     left: 0;
+    color:$background;
     background-color: white;
   }
 }

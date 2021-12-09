@@ -1,9 +1,4 @@
 @import "../../assets/style";
-@mixin for-tablette {
-  @media (max-width: 900px) {
-    @content;
-  }
-}
 
 .home {
   display: flex;
