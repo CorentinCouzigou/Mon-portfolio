@@ -1,7 +1,7 @@
 @import "../../assets/style";
 
 .custom__button{
-  background-color: white;
+  background-color: $colorWhite;
   border: none;
   font-weight: bold;
   color: $background;
@@ -18,7 +18,7 @@
   &--seeMore {
     margin-top: 0rem;
     display:flex;
-    background-color:	white;
+    background-color:	$colorWhite;
     box-shadow: 6px 6px 0 $colorAlpha;
     &:hover{
       background-color:	$colorAlpha;

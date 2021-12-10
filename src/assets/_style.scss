@@ -14,11 +14,17 @@
     @content;
   }
 }
+@mixin for-deviceLittleHeight {
+  @media (max-height: 650px) {
+    @content;
+  }
+}
 $fontVampiro: "Vampiro One", cursive;
 $background: #060b26;
 $colorAlpha: #f18805;
 $colorBeta:#c03221;
 $colorOmega: #1a83ff;
+$colorWhite: #ffffff;
 
 // $background: #060b26;
 // $colorAlpha: #ff0000;

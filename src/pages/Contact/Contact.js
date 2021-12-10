@@ -44,10 +44,10 @@ function Contact() {
         else if (errorMessage === undefined) {
             emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, form.current, process.env.REACT_APP_EMAILJS_USER_ID).then(function (response) {
                 console.log("SUCCES !", response.status, response.text)
-                setMessageError("Votre message a bien été envoyé.");
+                setMessageError("Votre message a bien été envoyé. Redirection vers la page d'accueil.");
                 const timer = setTimeout(() => {
                     navigate('/');
-                }, 2000)
+                }, 2500)
                 return () => clearTimeout(timer);
             }, function (error) {
                 console.log('FAILED...', error);
@@ -72,10 +72,10 @@ function Contact() {
                         <input className="contact__form__input" name="name" placeholder="Nom" id="name" type="text" value={fullName} onChange={(event) => setFullName(event.target.value)} />
 
                         <label className="contact__form__label" htmlFor="email">Votre Email</label>
-                        <input value={email} name="email" onChange={(event) => setEmail(event.target.value)} className="contact__form__input" placeholder="Email" id="email" type="text" />
+                        <input className="contact__form__input" value={email} name="email" onChange={(event) => setEmail(event.target.value)} className="contact__form__input" placeholder="Email" id="email" type="text" />
 
                         <label className="contact__form__label" htmlFor="userText">Votre message</label>
-                        <textarea name="message" value={text} onChange={(event) => setText(event.target.value)} className="contact__form__input" placeholder="Message" id="userText" type="text" />
+                        <textarea  className="contact__form__input" name="message" value={text} onChange={(event) => setText(event.target.value)} className="contact__form__input" placeholder="Message" id="userText" type="text" />
 
                     </div>
                     <div className="contact__form__validation">

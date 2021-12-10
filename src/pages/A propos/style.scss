@@ -6,33 +6,37 @@
   align-items: center;
 }
 .about__container {
-  border: 4px solid white;
+  border: 4px solid $colorWhite;
   width: 95%;
   min-height: 80vh;
   max-height: 80vh;
   display: flex;
   position: relative;
-  overflow: hidden;
   @include for-phone-only {
     min-height: none;
     max-height: none;
     flex-direction: column;
+
   }
 }
 
 .about__presentation {
   width: 50%;
+  overflow-y: auto;
   @include for-phone-only {
     width: 100%;
     border-right: none;
+    overflow-y: auto;
+  }
+  @include for-deviceLittleHeight {
     overflow-y: auto;
   }
 
   overflow-x: hidden;
   min-height: 100%;
   padding: 1rem;
-  border-right: 4px solid white;
-  color: white;
+  border-right: 4px solid $colorWhite;
+  color: $colorWhite;
   position: relative;
   overflow: hidden;
   &__container {
@@ -79,7 +83,7 @@
 }
 .card__diploma > span {
   font-size: 1rem;
-  color: white;
+  color: $colorWhite;
 }
 .about__logo {
   @include for-phone-only {
@@ -88,7 +92,7 @@
   }
   
   overflow-x: hidden;
-  color: white;
+  color: $colorWhite;
   padding: 1rem;
   width: 50%;
   min-height: 100%;
