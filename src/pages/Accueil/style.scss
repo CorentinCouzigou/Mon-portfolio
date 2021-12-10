@@ -17,10 +17,17 @@
 .home__image {
   width: 50%;
   height: 80vh;
-  background-image: url(../../assets/images/imgHomePAge.jpg);
-  background-position: center;
-  background-size:cover;
-  background-repeat: no-repeat;
+  position: relative;
+
+  &__photo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
   z-index: 2;
   @include for-tablette {
     display: none;
@@ -29,6 +36,7 @@
     display: none;
   }
 }
+
 
 .home__presentation {
   color: $colorWhite;

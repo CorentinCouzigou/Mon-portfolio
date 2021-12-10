@@ -15,7 +15,6 @@ function Contact() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log("current", form.current);
         let errorMessage = schema.validate({
             nom: fullName,
             email: email,

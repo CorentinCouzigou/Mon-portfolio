@@ -1,5 +1,3 @@
-
-
 export const achievementsData = [
     {
         id: 1,
