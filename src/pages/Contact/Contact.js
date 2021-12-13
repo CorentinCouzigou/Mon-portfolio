@@ -46,7 +46,7 @@ function Contact() {
         else if (`${errorMessage}` === `ValidationError: "message" is not allowed to be empty`) {
             setMessageError(`Un message est nécessaire.`);
         }
-        else if (`${errorMessage}` === `ValidationError: "message" with value "${text}" fails to match the required pattern:  /^[A-Za-zéè ;!:-?@^.\\n]*$/`) {
+        else if (`${errorMessage}` === `ValidationError: "message" with value "${text}" fails to match the required pattern: /^[A-Za-zéè ;!:-?@^.\\n]*$/`) {
             setMessageError(`Un message valide est nécessaire. Pas de caractères spéciaux, ni de chiffre.`);
         }
         else if (errorMessage) {
