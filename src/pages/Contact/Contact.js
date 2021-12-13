@@ -20,11 +20,6 @@ function Contact() {
             email: email,
             message: text,
         }).error;
-        console.log(errorMessage)
-        // console.log(errorMessage.ValidationError.split(' '))
-        // if (errorMessage.ValidationError.split('').includes("nom")) {
-        //     setMessageError(`Un nom valide est nécessaire, sans caractères spéciaux.`);
-        // }
         if (`${errorMessage}` === `ValidationError: "nom" is not allowed to be empty`) {
             setMessageError(`Un nom est nécessaire.`);
         }

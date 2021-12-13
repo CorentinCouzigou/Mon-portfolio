@@ -9,7 +9,6 @@ import homeData from './homeData';
 function Accueil() {
   const [loading, setLoading] = useState(true);
   const counter = useRef(0);
-  console.log(counter)
   const imageLoaded = () => {
     counter.current += 1;
     if (counter.current > 0) {
