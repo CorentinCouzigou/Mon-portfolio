@@ -52,12 +52,11 @@
         font-weight: bold;
       }
       &__button:hover {
-        font-family: $fontVampiro;
         background-color: $colorAlpha;
         font-size: 1rem;
         font-weight: bold;
         border: 12x solid $background;
-        color: black;
+        color: $colorWhite;
         cursor: pointer;
       }
       &__span {

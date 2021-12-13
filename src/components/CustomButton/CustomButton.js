@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 import './CustomButton.scss';
 
-export default function CustomButton({ link, text }) {
+export default function CustomButton({ link, text, type }) {
 
     return (
         <>
-            <Link className="custom__button__link" to={link} ><button className="custom__button custom__button--seeMore">{text}
+            <Link className="custom__button__link" to={link} ><button type={type} className="custom__button custom__button--seeMore">{text}
                 <div className="wrapper__arrow">
                     <MdOutlineArrowForwardIos className="arrow arrow--1" />
                     <MdOutlineArrowForwardIos className="arrow arrow--2" />
@@ -21,4 +21,5 @@ export default function CustomButton({ link, text }) {
 CustomButton.propTypes = {
     link: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
 }

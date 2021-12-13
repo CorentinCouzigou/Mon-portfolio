@@ -16,26 +16,27 @@ function About() {
                     </div>
                     <div className="about__presentation__container">
                         <div className="about__presentation__text">
-                            <h1>Mon parcours</h1><br />
-                            <p>Après 8 années passées dans le monde de la santé où j'ai pu développer mon goût pour le travail d'équipe , et une rigueur dans mon travail, j'ai décidé de prendre un nouveau cap professionnel.</p>
+                            <h1>Mon parcours</h1>
                             <br />
-                            <p>Ma passion pour l'informatique que j'ai depuis tout jeune et ma curiosité d'esprit , m'ont permis de transformer cette passion en métier.</p>
+                            <p>Mordu d'informatique depuis tout jeune j'ai décidé de faire de ma passion un métier. Après 8 années passées dans le monde de la santé, J'ai décidé de prendre un nouveau cap professionnel et de réaliser ce projet.</p>
                             <br />
-                            <p>J'ai donc réalisé une reconversion professionnelle à l'école du numérique O'clock. Après ces 6 mois de formations intensives, j'en ressors avec un niveau de Développeur Junior Front et Back.</p>
+                            <p>J'ai donc réalisé une reconversion professionnelle à l'école du numérique O'clock. Après ces 6 mois de formations intensives, j'en ressors avec un niveau de Développeur Junior Front-end et Back-end. Par la suite afin de concrétiser mon projet, j'ai obtenu mon titre professionnel de développeur web et web mobile. Étant attentif aux bonnes pratiques du web, surtout en matière d'accessibilité, il était import à mes yeux d'obtenir la certification Opquast.</p>
+                            <br />
+                            <p>Mon ancien domaine d'exercice ma permis d'être à l'écoute des autres et à faire preuve de d'adaptabilité, je suis donc à l'aise dans un environnement de travail de type méthode Agile/Scrum.</p>
                             <br />
                             <p>Désireux d'enrichir constamment mes connaissances, je souhaite mettre mes compétences  au sein d'une équipe dynamique.</p>
                             <br />
                             <a className="about__presentation__linkedin" href="https://www.linkedin.com/in/corentin-couzigou-0b200b175/"><SiLinkedin /></a>
                         </div>
                         <div className="wrapper__customButton__about">
-                            <CustomButton link="/achievements" text="Mes réalisations" positionX={4} positionY={10} />
+                            <CustomButton type="button" link="/achievements" text="Mes réalisations" positionX={4} positionY={10} />
                         </div>
                         <div className="about__presentation__diploma">
-                            <a href="https://drive.google.com/file/d/1iKg3pppDYhVZ3DqR8yXVot6gId3h8X9_/view?usp=sharing" className="card__diploma">
+                            <a href="https://drive.google.com/file/d/1JQFwe6qscBmqDoVegHEUmYdIFNCewF-C/view?usp=sharing" className="card__diploma">
                                 <GoMortarBoard />
                                 <span>Titre professionnel</span>
                             </a>
-                            <a href="https://drive.google.com/file/d/1iKg3pppDYhVZ3DqR8yXVot6gId3h8X9_/view?usp=sharing" className="card__diploma">
+                            <a href="https://drive.google.com/file/d/1JQFwe6qscBmqDoVegHEUmYdIFNCewF-C/view?usp=sharing" className="card__diploma">
                                 <GiDiploma />
                                 <span>Certification Opquast</span>
                             </a>

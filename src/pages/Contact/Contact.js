@@ -21,8 +21,15 @@ function Contact() {
             message: text,
         }).error;
         console.log(errorMessage)
+        // console.log(errorMessage.ValidationError.split(' '))
+        // if (errorMessage.ValidationError.split('').includes("nom")) {
+        //     setMessageError(`Un nom valide est nécessaire, sans caractères spéciaux.`);
+        // }
         if (`${errorMessage}` === `ValidationError: "nom" is not allowed to be empty`) {
             setMessageError(`Un nom est nécessaire.`);
+        }
+        else if (`${errorMessage}` === `ValidationError: "nom" with value "${fullName}" fails to match the required pattern: /^[^(<(w)>(.*)</(w)>)]+$/`) {
+            setMessageError(`Un nom valide est nécessaire. Pas de caractères spéciaux, ni de chiffre.`);
         }
         else if (`${errorMessage}` === `ValidationError: "nom" must only contain alpha-numeric characters`) {
             setMessageError(`Un nom valide est nécessaire, sans caractères spéciaux.`);
@@ -30,12 +37,17 @@ function Contact() {
         else if (`${errorMessage}` === `ValidationError: "email" is not allowed to be empty`) {
             setMessageError(`Un Email est nécessaire.`);
         }
-
         else if (`${errorMessage}` === `ValidationError: "email" must be a valid email`) {
+            setMessageError(`Un Email valide est nécessaire.`);
+        }
+        else if (`${errorMessage}` === `ValidationError: "email" with value "${email}" fails to match the required pattern: /^[A-Z0-9a-z._%+-]+@[a-z0-9.-]+\\.[a-z]{1,4}}*$/`) {
             setMessageError(`Un Email valide est nécessaire.`);
         }
         else if (`${errorMessage}` === `ValidationError: "message" is not allowed to be empty`) {
             setMessageError(`Un message est nécessaire.`);
+        }
+        else if (`${errorMessage}` === `ValidationError: "message" with value "${text}" fails to match the required pattern:  /^[A-Za-z :?.]*$/`) {
+            setMessageError(`Un message valide est nécessaire. Pas de caractères spéciaux, ni de chiffre.`);
         }
         else if (errorMessage) {
             setMessageError(`${errorMessage}`);
@@ -74,7 +86,7 @@ function Contact() {
                         <input className="contact__form__input" value={email} name="email" onChange={(event) => setEmail(event.target.value)} className="contact__form__input" placeholder="Email" id="email" type="text" />
 
                         <label className="contact__form__label" htmlFor="userText">Votre message</label>
-                        <textarea  className="contact__form__input" name="message" value={text} onChange={(event) => setText(event.target.value)} className="contact__form__input" placeholder="Message" id="userText" type="text" />
+                        <textarea className="contact__form__input" name="message" value={text} onChange={(event) => setText(event.target.value)} className="contact__form__input" placeholder="Message" id="userText" type="text" />
 
                     </div>
                     <div className="contact__form__validation">
