@@ -20,48 +20,46 @@ function Contact() {
             email: email,
             message: text,
         }).error;
-        if (`${errorMessage}` === `ValidationError: "nom" is not allowed to be empty`) {
-            setMessageError(`Un nom est nécessaire.`);
-        }
-        else if (`${errorMessage}` === `ValidationError: "nom" with value "${fullName}" fails to match the required pattern: /^[^(<(w)>(.*)</(w)>)]+$/`) {
-            setMessageError(`Un nom valide est nécessaire. Pas de caractères spéciaux, ni de chiffre.`);
-        }
-        else if (`${errorMessage}` === `ValidationError: "nom" must only contain alpha-numeric characters`) {
-            setMessageError(`Un nom valide est nécessaire, sans caractères spéciaux.`);
-        }
-        else if (`${errorMessage}` === `ValidationError: "email" is not allowed to be empty`) {
-            setMessageError(`Un Email est nécessaire.`);
-        }
-        else if (`${errorMessage}` === `ValidationError: "email" must be a valid email`) {
-            setMessageError(`Un Email valide est nécessaire.`);
-        }
-        else if (`${errorMessage}` === `ValidationError: "email" with value "${email}" fails to match the required pattern: /^[A-Z0-9a-z._%+-]+@[a-z0-9.-]+\\.[a-z]{1,4}}*$/`) {
-            setMessageError(`Un Email valide est nécessaire.`);
-        }
-        else if (`${errorMessage}` === `ValidationError: "message" is not allowed to be empty`) {
-            setMessageError(`Un message est nécessaire.`);
-        }
-        else if (`${errorMessage}` === `ValidationError: "message" with value "${text}" fails to match the required pattern: /^[A-Za-zéè ;!:-?@^.\\n]*$/`) {
-            setMessageError(`Un message valide est nécessaire. Pas de caractères spéciaux, ni de chiffre.`);
-        }
-        else if (errorMessage) {
-            setMessageError(`${errorMessage}`);
-        }
-        else if (errorMessage === undefined) {
-            emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, form.current, process.env.REACT_APP_EMAILJS_USER_ID).then(function (response) {
-                console.log("SUCCES !", response.status, response.text)
-                setMessageError("Votre message a bien été envoyé. Redirection vers la page d'accueil.");
-                const timer = setTimeout(() => {
-                    navigate('/');
-                }, 2500)
-                return () => clearTimeout(timer);
-            }, function (error) {
-                console.log('FAILED...', error);
-            });
 
-
-        };
-
+        switch (`${errorMessage}`) {
+            case 'ValidationError: "nom" is not allowed to be empty':
+                setMessageError(`Un nom est nécessaire.`);
+                break;
+            case `ValidationError: "nom" with value "${fullName}" fails to match the required pattern: /^[^(<(w)>(.*)</(w)>)]+$/`:
+                setMessageError(`Un nom valide est nécessaire. Pas de caractères spéciaux, ni de chiffre.`);
+                break;
+            case `ValidationError: "nom" must only contain alpha-numeric characters`:
+                setMessageError(`Un nom valide est nécessaire, sans caractères spéciaux.`);
+                break;
+            case `ValidationError: "email" is not allowed to be empty`:
+                setMessageError(`Un Email est nécessaire.`);
+                break;
+            case `ValidationError: "email" must be a valid email`:
+                setMessageError(`Un Email valide est nécessaire.`);
+                break;
+            case `ValidationError: "email" with value "${email}" fails to match the required pattern: /^[A-Z0-9a-z._%+-]+@[a-z0-9.-]+\\.[a-z]{1,4}}*$/`:
+                setMessageError(`Un Email valide est nécessaire.`);
+                break;
+            case `ValidationError: "message" is not allowed to be empty`:
+                setMessageError(`Un message est nécessaire.`);
+                break;
+            case `ValidationError: "message" with value "${text}" fails to match the required pattern: /^[A-Za-zéè ;!:-?@^.\\n]*$/`:
+                setMessageError(`Un message valide est nécessaire. Pas de caractères spéciaux, ni de chiffre.`);
+                break;
+            case 'undefined':
+                emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, form.current, process.env.REACT_APP_EMAILJS_USER_ID).then(function (response) {
+                    setMessageError("Votre message a bien été envoyé. Redirection vers la page d'accueil.");
+                    const timer = setTimeout(() => {
+                        navigate('/');
+                    }, 2500)
+                    return () => clearTimeout(timer);
+                }, function (error) {
+                    console.log('FAILED...', error);
+                });
+                break;
+            default:
+                setMessageError(`${errorMessage}`);
+        }
     }
 
     return (

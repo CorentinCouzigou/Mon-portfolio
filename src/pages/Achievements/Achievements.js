@@ -9,7 +9,6 @@ function Achievements() {
 
     const [loading, setLoading] = useState(true);
     const counter = useRef(0);
-    console.log(counter);
     const imageLoaded = () => {
         counter.current += 1;
         if (counter.current >= achievementsData.length) {
@@ -51,14 +50,14 @@ function Achievements() {
                         </li>
                     </ul>
                     <div className="wrapper__customButton__contact">
-                        <CustomButton  type="button" link="/contact" text="Me contacter" />
+                        <CustomButton type="button" link="/contact" text="Me contacter" />
                     </div>
                     <div className="achievements__cards__container">
                         {achievements.map((item) => {
                             return (
                                 <div key={item.id} className="card">
                                     <img onLoad={imageLoaded} className="card__image" src={item.image} alt={item.id} />
-                                    <a className="card__overlay" href={item.link}><p>
+                                    <a target="_blank" className="card__overlay" href={item.link}><p>
                                         {item.title}<br />
                                         <br />
                                         {item.desc}

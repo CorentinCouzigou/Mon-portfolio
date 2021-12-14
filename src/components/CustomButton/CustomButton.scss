@@ -20,6 +20,7 @@
     display:flex;
     background-color:	$colorWhite;
     box-shadow: 6px 6px 0 $colorAlpha;
+    font-family: "Ubuntu Mono", monospace;
     &:hover{
       background-color:	$colorAlpha;
     }
