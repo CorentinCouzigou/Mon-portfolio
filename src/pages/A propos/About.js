@@ -18,7 +18,7 @@ function About() {
                         <div className="about__presentation__text">
                             <h1>Mon parcours</h1>
                             <br />
-                            <p>Mordu d'informatique depuis tout jeune, j'ai décidé de faire de ma passion un métier. Après 8 années passées dans le monde de la santé, j'ai souhaité prendre un nouveau cap professionnel et réaliser ce projet.</p>
+                            <p>Mordu d'informatique depuis l'enfance, j'ai décidé de faire de ma passion un métier. Après 8 années passées dans le monde de la santé, j'ai souhaité prendre un nouveau cap professionnel et réaliser ce projet.</p>
                             <br />
                             <p>J'ai alors effectué une reconversion professionnelle à l'école du numérique O'clock. Ces 6 mois de formations intensives, m'ont permis d'acquerir un niveau de Développeur Junior Front-end et Back-end. Pour concrétiser mon projet, j'ai obtenu le titre professionnel de développeur Web et Web mobile. Étant attentif aux bonnes pratiques du Web et souhaitant compléter ma formation, j'ai reçu la certification Opquast.</p>
                             <br />
