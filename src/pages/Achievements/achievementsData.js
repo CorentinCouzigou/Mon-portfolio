@@ -68,7 +68,7 @@ export const achievementsData = [
         id: 9,
         title: 'Converter',
         desc: "Converter en euros avec la device de votre choix.",
-        image: require('../../assets/images/converter.png').default,
+        image: require('../../assets/images/converter2.png').default,
         link: "https://github.com/CorentinCouzigou/Converteur-React",
         nature: "Front",
     },
