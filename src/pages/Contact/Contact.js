@@ -43,8 +43,8 @@ function Contact() {
             case `ValidationError: "message" is not allowed to be empty`:
                 setMessageError(`Un message est nécessaire.`);
                 break;
-            case `ValidationError: "message" with value "${text}" fails to match the required pattern: /^[A-Za-zéèÏïÉç ,;!:-?@^.\\n]*$/`:
-                setMessageError(`Un message valide est nécessaire. Pas de caractères spéciaux, ni de chiffre et sans émoticône.`);
+            case `ValidationError: "message" with value "${text}" fails to match the required pattern: /^[A-Za-zéèÏïÉç0-9 ,;!:-?@^.\\n]*$/`:
+                setMessageError(`Un message valide est nécessaire. Pas de caractères spéciaux, et sans émoticône.`);
                 break;
             case 'undefined':
                 emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, form.current, process.env.REACT_APP_EMAILJS_USER_ID).then(function (response) {
