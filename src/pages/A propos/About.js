@@ -26,17 +26,17 @@ function About() {
                             <br />
                             <p>Désireux d'enrichir constamment mes connaissances, je souhaite mettre mes compétences  au sein d'une équipe dynamique.</p>
                             <br />
-                            <a className="about__presentation__linkedin" href="https://www.linkedin.com/in/corentin-couzigou-0b200b175/"><SiLinkedin /></a>
+                            <a className="about__presentation__linkedin" title="Linkedin" href="https://www.linkedin.com/in/corentin-couzigou-0b200b175/"><SiLinkedin title="Linkedin" /></a>
                         </div>
                         <div className="wrapper__customButton__about">
                             <CustomButton type="button" link="/achievements" text="Mes réalisations" positionX={4} positionY={10} />
                         </div>
                         <div className="about__presentation__diploma">
-                            <a href="#" className="card__diploma">
+                            <a href="#" className="card__diploma" title="Titre professionnel de développeur Web et Web mobile">
                                 <GoMortarBoard />
                                 <span>Titre professionnel</span>
                             </a>
-                            <a target="_blank" href="https://drive.google.com/file/d/1JQFwe6qscBmqDoVegHEUmYdIFNCewF-C/view?usp=sharing" className="card__diploma">
+                            <a target="_blank" title="Certification des bonnes pratiques et du vocabulaire Web" href="https://drive.google.com/file/d/1JQFwe6qscBmqDoVegHEUmYdIFNCewF-C/view?usp=sharing" className="card__diploma">
                                 <GiDiploma />
                                 <span>Certification Opquast</span>
                             </a>
