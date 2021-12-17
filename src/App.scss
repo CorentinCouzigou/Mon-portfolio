@@ -1,5 +1,7 @@
 @import "./assets/style.scss";
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap');
+
 html {
   @include for-phone-only {
     font-size: 12px;
@@ -7,7 +9,7 @@ html {
 }
 body {
   background-color: $background;
-  font-family: 'Times New Roman', Times, serif
+  font-family: 'Chakra Petch', sans-serif;
 
 }
 *{
