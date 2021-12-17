@@ -72,5 +72,13 @@ export const achievementsData = [
         link: "https://github.com/CorentinCouzigou/Converteur-React",
         nature: "Front",
     },
+    {
+        id: 10,
+        title: 'DeckBuilder',
+        desc: "DeckBuilder sur le fameux jeu de cartes Triple Triad présent dans le jeu video Final Fantasy 8.",
+        image: require('../../assets/images/deckbuilderHome.png').default,
+        link: "https://github.com/CorentinCouzigou/Deck-Builder-FF",
+        nature: "Back",
+    },
 
 ];
