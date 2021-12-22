@@ -32,10 +32,10 @@ function About() {
                             <CustomButton type="button" link="/achievements" text="Mes réalisations" positionX={4} positionY={10} />
                         </div>
                         <div className="about__presentation__diploma">
-                            <a href="#" target="_blank" rel="noopener noreferrer" className="card__diploma" title="Titre professionnel de développeur Web et Web mobile">
+                            <div className="card__diploma" title="Titre professionnel de développeur Web et Web mobile">
                                 <GoMortarBoard />
                                 <span>Titre professionnel</span>
-                            </a>
+                            </div>
                             <a target="_blank" title="Certification des bonnes pratiques et du vocabulaire Web" href="https://drive.google.com/file/d/1JQFwe6qscBmqDoVegHEUmYdIFNCewF-C/view?usp=sharing" rel="noopener noreferrer" className="card__diploma">
                                 <GiDiploma />
                                 <span>Certification Opquast</span>

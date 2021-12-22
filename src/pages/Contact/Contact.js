@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { schema } from '../../validation/contact';
@@ -25,7 +24,7 @@ function Contact() {
             case 'ValidationError: "nom" is not allowed to be empty':
                 setMessageError(`Un nom est nécessaire.`);
                 break;
-            case `ValidationError: "nom" with value "${fullName}" fails to match the required pattern: /^[^(<(w)>(.*)</(w)>)]+$/`:
+            case `ValidationError: "nom" with value "${fullName}" fails to match the required pattern: /^[A-Za-zéèêÏîïÉç -.]*$/`:
                 setMessageError(`Un nom valide est nécessaire. Pas de caractères spéciaux, ni de chiffre.`);
                 break;
             case `ValidationError: "nom" must only contain alpha-numeric characters`:
@@ -43,7 +42,7 @@ function Contact() {
             case `ValidationError: "message" is not allowed to be empty`:
                 setMessageError(`Un message est nécessaire.`);
                 break;
-            case `ValidationError: "message" with value "${text}" fails to match the required pattern: /^[A-Za-zéèÏïÉç0-9 ,;!:-?@^.\\n]*$/`:
+            case `ValidationError: "message" with value "${text}" fails to match the required pattern: /^[A-Za-zéèÏïîêÉç0-9 ,;!:-?@.\\n]*$/`:
                 setMessageError(`Un message valide est nécessaire. Pas de caractères spéciaux, et sans émoticône.`);
                 break;
             case 'undefined':
@@ -74,13 +73,10 @@ function Contact() {
                     <div className="contact__form__container__field">
                         <label className="contact__form__label" htmlFor="name">Votre nom</label>
                         <input className="contact__form__input" name="name" placeholder="Nom" id="name" type="text" value={fullName} onChange={(event) => setFullName(event.target.value)} />
-
                         <label className="contact__form__label" htmlFor="email">Votre Email</label>
-                        <input className="contact__form__input" value={email} name="email" onChange={(event) => setEmail(event.target.value)} className="contact__form__input" placeholder="Email" id="email" type="text" />
-
+                        <input className="contact__form__input" value={email} name="email" onChange={(event) => setEmail(event.target.value)} placeholder="Email" id="email" type="text" />
                         <label className="contact__form__label" htmlFor="userText">Votre message</label>
-                        <textarea className="contact__form__input" name="message" value={text} onChange={(event) => setText(event.target.value)} className="contact__form__input" placeholder="Message" id="userText" type="text" />
-
+                        <textarea className="contact__form__input" name="message" value={text} onChange={(event) => setText(event.target.value)} placeholder="Message" id="userText" type="text" />
                     </div>
                     <div className="contact__form__validation">
                         <button className="contact__form__validation__button" type="submit">Valider</button>  <span className="contact__form__validation__span">{messageError}</span>
