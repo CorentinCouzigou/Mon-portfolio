@@ -32,7 +32,6 @@
     }
     &__validation {
       width: 100%;
-      overflow: hidden;
       display: flex;
 
       &__button {
@@ -60,7 +59,7 @@
     &__label {
       color: $colorWhite;
       font-size: 1rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
     &__input {
       border: none;
@@ -75,10 +74,11 @@
     }
     &__input:nth-child(7n){
       min-width: 60%;
-      min-height: 11rem;
+      min-height: 9rem;
       overflow: auto;
       @include for-phone-only {
         width: 100%;
+        min-height: 14rem;
         overflow: auto;
       }
     }
