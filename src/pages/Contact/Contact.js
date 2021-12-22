@@ -47,7 +47,7 @@ function Contact() {
                 setMessageError(`Un message valide est nécessaire. Pas de caractères spéciaux, et sans émoticône.`);
                 break;
             case 'undefined':
-                emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, form.current, process.env.REACT_APP_EMAILJS_USER_ID).then(function (response) {
+                emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, event.target, process.env.REACT_APP_EMAILJS_USER_ID).then(function (response) {
                     setMessageError("Votre message a bien été envoyé. Redirection vers la page d'accueil.");
                     const timer = setTimeout(() => {
                         navigate('/');

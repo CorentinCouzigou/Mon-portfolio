@@ -4,6 +4,7 @@ import "./achievements.scss";
 import { achievementsData } from './achievementsData';
 import CustomButton from "../../components/CustomButton/CustomButton";
 import Loading from '../../components/Loading/Loading';
+import { SiNetlify, SiGithub } from "react-icons/si";
 
 function Achievements() {
 
@@ -57,11 +58,16 @@ function Achievements() {
                             return (
                                 <div key={item.id} className="card">
                                     <img onLoad={imageLoaded} className="card__image" src={item.image} alt={item.id} />
-                                    <a target="_blank" className="card__overlay" href={item.link}><p>
+                                    <div className="card__overlay" ><p>
                                         {item.title}<br />
                                         <br />
                                         {item.desc}
-                                    </p></a>
+                                    </p>
+                                        <div className="card__overlay__links">
+                                            <a className="card__overlay__link" target="_blank" title="Github" rel="noopener noreferrer" href={item.link}><SiGithub /></a>
+                                            {item.deployment ? <a className="card__overlay__link" target="_blank" title="Déploiement" rel="noopener noreferrer" href={item.deployment}><SiNetlify /></a> : ""}
+                                        </div>
+                                    </div>
                                     <div className="card__tag">
                                         {item.nature}
                                     </div>
