@@ -1,15 +1,23 @@
 @import "../../assets/style";
 
 .home {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  @include for-phone-only {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-top:5rem;
+ 
+
+  }
 }
 .home__container {
   border: 4px solid $colorWhite;
-  min-height: 80vh;
-  max-height: 80vh;
-  width: 95%;
+  width:100%;
+  height: 80vh;
   display: flex;
   position: relative;
   overflow: hidden;

@@ -70,16 +70,18 @@ function Contact() {
                 </div>
                 <form ref={form} className="contact__form" onSubmit={handleSubmit}>
                     <h1 className="contact__form__title">Let's Talk</h1>
-                    <div className="contact__form__container__field">
-                        <label className="contact__form__label" htmlFor="name">Votre nom</label>
-                        <input className="contact__form__input" name="name" placeholder="Nom" id="name" type="text" value={fullName} onChange={(event) => setFullName(event.target.value)} />
-                        <label className="contact__form__label" htmlFor="email">Votre Email</label>
-                        <input className="contact__form__input" value={email} name="email" onChange={(event) => setEmail(event.target.value)} placeholder="Email" id="email" type="text" />
-                        <label className="contact__form__label" htmlFor="userText">Votre message</label>
-                        <textarea className="contact__form__input" name="message" value={text} onChange={(event) => setText(event.target.value)} placeholder="Message" id="userText" type="text" />
-                    </div>
+
+                    <label className="contact__form__label" htmlFor="name">Votre nom</label>
+                    <input className="contact__form__input" name="name" placeholder="Nom" id="name" type="text" value={fullName} onChange={(event) => setFullName(event.target.value)} />
+
+                    <label className="contact__form__label" htmlFor="email">Votre Email</label>
+                    <input className="contact__form__input" value={email} name="email" onChange={(event) => setEmail(event.target.value)} placeholder="Email" id="email" type="text" />
+
+                    <label className="contact__form__label" htmlFor="userText">Votre message</label>
+                    <textarea className="contact__form__input --textarea" name="message" value={text} onChange={(event) => setText(event.target.value)} placeholder="Message" id="userText" type="text" />
+
                     <div className="contact__form__validation">
-                        <button className="contact__form__validation__button" type="submit">Valider</button>  <span className="contact__form__validation__span">{messageError}</span>
+                        <button className="contact__form__validation__button" type="submit">Valider</button><span className="contact__form__validation__span">{messageError}</span>
                     </div>
 
                 </form>

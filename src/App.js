@@ -18,7 +18,7 @@ function App() {
       <Navbar />
       <ParticlesComponent />
       <Routes>
-        <Route className="home" path='/' exact element={<Home />} />
+        <Route path='/' exact element={<Home />} />
         <Route path='/about' element={<Reports />} />
         <Route path='/achievements' element={<Products />} />
         <Route path='/contact' element={<Contact />} />

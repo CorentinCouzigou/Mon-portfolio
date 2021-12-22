@@ -1,62 +1,54 @@
 @import "../../assets/style";
 .contact {
+  width: 100%;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  @include for-phone-only {
+    position: relative;
+    margin-top:5rem;
+  }
   &__container {
     border: 4px solid $colorWhite;
-    width: 95%;
-    min-height: 80%;
-    max-height: 81%;
-    padding: 2rem;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+
   }
   &__form {
     margin-top: 1rem;
     width: 100%;
-    min-height: 30rem;
-    max-height: 90%;
+    height:93%;
     overflow: auto;
     display: flex;
     align-items: flex-start;
-    @include for-phone-only {
-      align-items: flex-start;
-    }
-    justify-content: space-around;
     flex-direction: column;
     color: $colorWhite;
+  
     &__title {
       font-size: 2rem;
       margin-bottom: 1rem;
     }
-    &__container__field {
-      width: 100%;
-      min-height: 15%;
-      display: flex;
-      justify-content: space-around;
-      align-items: flex-start;
-      flex-direction: column;
-      color: $colorWhite;
-    }
     &__validation {
       width: 100%;
-      overflow: auto;
+      overflow: hidden;
       display: flex;
+
       &__button {
         border: none;
-        width: 5rem;
-        height: 5rem;
+        width: 4rem;
+        height: 4rem;
         border-radius: 50%;
         background-color: $background;
         border: 2px solid $colorWhite;
-        font-size: 1rem;
+        font-size: 0.8rem;
         color: $colorAlpha;
         font-weight: bold;
       }
       &__button:hover {
         background-color: $colorAlpha;
-        font-size: 1rem;
         font-weight: bold;
-        border: 12x solid $background;
         color: $colorWhite;
         cursor: pointer;
       }
@@ -81,7 +73,7 @@
       color: $colorWhite;
       background-color: $background;
     }
-    &__input:nth-child(3n) {
+    &__input:nth-child(7n){
       min-width: 60%;
       min-height: 11rem;
       overflow: auto;
