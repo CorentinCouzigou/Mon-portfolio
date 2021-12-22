@@ -5,16 +5,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  @include for-phone-only {
-    position: relative;
-    margin-top:5rem;
-  }
   &__container {
     border: 4px solid $colorWhite;
     width: 100%;
     height: 100%;
     padding: 1rem;
-
   }
   &__form {
     margin-top: 1rem;
