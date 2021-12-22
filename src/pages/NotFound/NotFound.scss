@@ -1,5 +1,6 @@
 @import "../../assets/style";
 .notFound {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,9 +11,8 @@
     flex-direction: column;
     color: $colorWhite;
     border: 4px solid $colorWhite;
-    width: 95%;
-    min-height: 80vh;
-    max-height: 80vh;
+    width:100%;
+    height: 80vh;
     margin-top: 1rem;
     padding: 1rem;
     &__404 {
@@ -76,7 +76,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: ring 1.5s infinite;
+  animation: ring 2.5s infinite;
 }
 
 .notFound__button:hover::after,
@@ -87,13 +87,13 @@
 
 @keyframes ring {
   0% {
-    width: 2rem;
-    height: 2rem;
+    width: 0rem;
+    height: 0rem;
     opacity: 1;
   }
   100% {
-    width: 15rem;
-    height: 15rem;
+    width: 24rem;
+    height: 24rem;
     opacity: 0;
   }
 }
