@@ -24,6 +24,9 @@
   @include for-phone-only {
     flex-direction: column;
   }
+  @include for-deviceLittleHeight {
+    margin-top: 2rem;
+  }
 }
 
 .about__presentation {

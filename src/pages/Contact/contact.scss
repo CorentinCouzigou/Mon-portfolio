@@ -10,17 +10,21 @@
     width: 100%;
     height: 100%;
     padding: 1rem;
+    @include for-deviceLittleHeight {
+      margin-top: 3rem;
+      overflow: hidden;
+    }
   }
   &__form {
     margin-top: 1rem;
     width: 100%;
-    height:93%;
+    height: 93%;
     overflow: auto;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     color: $colorWhite;
-  
+
     &__title {
       font-size: 2rem;
       margin-bottom: 1rem;
@@ -28,7 +32,6 @@
     &__validation {
       width: 100%;
       display: flex;
-
       &__button {
         border: none;
         width: 4rem;
@@ -39,6 +42,9 @@
         font-size: 0.8rem;
         color: $colorAlpha;
         font-weight: bold;
+        @include for-deviceLittleHeight {
+          margin-bottom: 1rem;
+        }
       }
       &__button:hover {
         background-color: $colorAlpha;
@@ -67,7 +73,7 @@
       color: $colorWhite;
       background-color: $background;
     }
-    &__input:nth-child(7n){
+    &__input:nth-child(7n) {
       min-width: 60%;
       min-height: 9rem;
       overflow: auto;

@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.22b21efe.chunk.css",
-    "main.js": "/static/js/main.4e63d510.chunk.js",
-    "main.js.map": "/static/js/main.4e63d510.chunk.js.map",
+    "main.css": "/static/css/main.68e71963.chunk.css",
+    "main.js": "/static/js/main.851deca4.chunk.js",
+    "main.js.map": "/static/js/main.851deca4.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d0605945.js",
     "runtime-main.js.map": "/static/js/runtime-main.d0605945.js.map",
     "static/js/2.07a4985f.chunk.js": "/static/js/2.07a4985f.chunk.js",
     "static/js/2.07a4985f.chunk.js.map": "/static/js/2.07a4985f.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.22b21efe.chunk.css.map": "/static/css/main.22b21efe.chunk.css.map",
+    "static/css/main.68e71963.chunk.css.map": "/static/css/main.68e71963.chunk.css.map",
     "static/js/2.07a4985f.chunk.js.LICENSE.txt": "/static/js/2.07a4985f.chunk.js.LICENSE.txt",
     "static/media/HFF.jpg": "/static/media/HFF.6fe042ea.jpg",
     "static/media/HomeClearSky.png": "/static/media/HomeClearSky.55626c94.png",
@@ -24,7 +24,7 @@
   "entrypoints": [
     "static/js/runtime-main.d0605945.js",
     "static/js/2.07a4985f.chunk.js",
-    "static/css/main.22b21efe.chunk.css",
-    "static/js/main.4e63d510.chunk.js"
+    "static/css/main.68e71963.chunk.css",
+    "static/js/main.851deca4.chunk.js"
   ]
 }
