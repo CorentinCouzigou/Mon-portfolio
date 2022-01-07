@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.68e71963.chunk.css",
-    "main.js": "/static/js/main.851deca4.chunk.js",
-    "main.js.map": "/static/js/main.851deca4.chunk.js.map",
+    "main.js": "/static/js/main.88f1db54.chunk.js",
+    "main.js.map": "/static/js/main.88f1db54.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d0605945.js",
     "runtime-main.js.map": "/static/js/runtime-main.d0605945.js.map",
     "static/js/2.07a4985f.chunk.js": "/static/js/2.07a4985f.chunk.js",
@@ -10,21 +10,21 @@
     "index.html": "/index.html",
     "static/css/main.68e71963.chunk.css.map": "/static/css/main.68e71963.chunk.css.map",
     "static/js/2.07a4985f.chunk.js.LICENSE.txt": "/static/js/2.07a4985f.chunk.js.LICENSE.txt",
-    "static/media/HFF.jpg": "/static/media/HFF.6fe042ea.jpg",
-    "static/media/HomeClearSky.png": "/static/media/HomeClearSky.55626c94.png",
-    "static/media/converter2.png": "/static/media/converter2.07163996.png",
-    "static/media/deckbuilderHome.png": "/static/media/deckbuilderHome.1ce5ef54.png",
-    "static/media/imgHomePAge.jpg": "/static/media/imgHomePAge.ffb97a89.jpg",
-    "static/media/netfluxhome.png": "/static/media/netfluxhome.db5ef91f.png",
-    "static/media/oquiz.png": "/static/media/oquiz.01401992.png",
-    "static/media/pokedexHome.png": "/static/media/pokedexHome.69d78c04.png",
-    "static/media/portfolio.png": "/static/media/portfolio.89b40739.png",
-    "static/media/todolist.png": "/static/media/todolist.3f678ae9.png"
+    "static/media/HFF.jpg": "/static/media/HFF.4ffd4dbd.jpg",
+    "static/media/HomeClearSky.png": "/static/media/HomeClearSky.fc396600.png",
+    "static/media/converter2.png": "/static/media/converter2.4d722575.png",
+    "static/media/deckbuilderHome.png": "/static/media/deckbuilderHome.e13dead7.png",
+    "static/media/imgHomePAge.jpg": "/static/media/imgHomePAge.760941d1.jpg",
+    "static/media/netfluxhome.png": "/static/media/netfluxhome.26bfc1ce.png",
+    "static/media/oquiz.png": "/static/media/oquiz.b1b4418a.png",
+    "static/media/pokedexHome.png": "/static/media/pokedexHome.4aec7ccb.png",
+    "static/media/portfolio.png": "/static/media/portfolio.630b1e7b.png",
+    "static/media/todolist.png": "/static/media/todolist.294b26fa.png"
   },
   "entrypoints": [
     "static/js/runtime-main.d0605945.js",
     "static/js/2.07a4985f.chunk.js",
     "static/css/main.68e71963.chunk.css",
-    "static/js/main.851deca4.chunk.js"
+    "static/js/main.88f1db54.chunk.js"
   ]
 }
