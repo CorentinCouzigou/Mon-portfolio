@@ -12,7 +12,8 @@ function Accueil() {
   const imageLoaded = () => {
     counter.current += 1;
     if (counter.current > 0) {
-      setLoading(false);
+      //change this for work my site
+      setLoading(true);
     }
   }
   return (
