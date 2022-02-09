@@ -15,7 +15,7 @@ import './App.scss';
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      {/* <Navbar /> */}
       <ParticlesComponent />
       <Routes>
         <Route path='/' exact element={<Home />} />
