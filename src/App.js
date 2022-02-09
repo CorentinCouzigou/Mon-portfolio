@@ -15,6 +15,7 @@ import './App.scss';
 function App() {
   return (
     <div className="App">
+    {/* A Décommenter pour que la navbar soit active */}
       {/* <Navbar /> */}
       <ParticlesComponent />
       <Routes>
