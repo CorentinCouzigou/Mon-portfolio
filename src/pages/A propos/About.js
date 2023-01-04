@@ -1,6 +1,8 @@
 import React from 'react';
 import "./style.scss";
-import { SiLinkedin, SiReact, SiRedux, SiPostgresql, SiSequelize, SiGithub, SiMongodb } from "react-icons/si";
+import { SiLinkedin, SiReact, SiRedux, SiPostgresql, SiSequelize, SiGithub, SiMongodb, SiLaravel, SiAngular } from "react-icons/si";
+import { AiFillGitlab } from "react-icons/ai";
+import { DiGit } from "react-icons/di";
 import { FaNode, FaSass } from "react-icons/fa";
 import { GiDiploma } from "react-icons/gi";
 import { GoMortarBoard } from "react-icons/go";
@@ -24,7 +26,7 @@ function About() {
                             <br />
                             <p>Mon ancien domaine d'exercice ma permis d'être à l'écoute des autres et à faire preuve d'adaptabilité, je suis donc à l'aise dans un environnement de travail de type méthode Agile/Scrum.</p>
                             <br />
-                            <p>Désireux d'enrichir constamment mes connaissances, je souhaite mettre mes compétences  au sein d'une équipe dynamique.</p>
+                            <p>Aujourd'hui je travaille au sein d'une équipe informatique dynamique chez GMS Group depuis mars 2022.</p>
                             <br />
                             <a className="about__presentation__linkedin" title="Linkedin" href="https://www.linkedin.com/in/corentin-couzigou-0b200b175/"><SiLinkedin title="Linkedin" /></a>
                         </div>
@@ -32,10 +34,10 @@ function About() {
                             <CustomButton type="button" link="/achievements" text="Mes réalisations" positionX={4} positionY={10} />
                         </div>
                         <div className="about__presentation__diploma">
-                            <div className="card__diploma" title="Titre professionnel de développeur Web et Web mobile">
+                            <a target="_blank" className="card__diploma" title="Titre professionnel de développeur Web et Web mobile" href="https://drive.google.com/file/d/1MLVGYLdXbZ-ajYn2VnPR57j9S6eiJjfl/view?usp=sharing">
                                 <GoMortarBoard />
                                 <span>Titre professionnel</span>
-                            </div>
+                            </a>
                             <a target="_blank" title="Certification des bonnes pratiques et du vocabulaire Web" href="https://drive.google.com/file/d/1JQFwe6qscBmqDoVegHEUmYdIFNCewF-C/view?usp=sharing" rel="noopener noreferrer" className="card__diploma">
                                 <GiDiploma />
                                 <span>Certification Opquast</span>
@@ -50,9 +52,13 @@ function About() {
                         <span className="about__presentation__span">Ce que je fais ?</span>
                     </div>
                     <div className="about__logo__container">
-                        <div className="about__logo__container__column"> <div className="about__logo__container__image1">
-                            <SiReact />
-                        </div>
+
+                        <div className="about__logo__container__column">
+                            <div className="about__logo__container__image1">
+                                <SiAngular />
+                            </div><div className="about__logo__container__image1">
+                                <SiReact />
+                            </div>
                             <div className="about__logo__container__image1">
                                 <SiRedux />
                             </div>
@@ -60,12 +66,15 @@ function About() {
                                 <FaSass />
                             </div>
                             <div className="about__logo__container__image1">
-                                <SiGithub />
+                                <DiGit />
                             </div>
                         </div>
-                        <div className="about__logo__container__column"> <div className="about__logo__container__image2">
-                            <FaNode />
-                        </div>
+                        <div className="about__logo__container__column">
+                            <div className="about__logo__container__image2">
+                                <SiLaravel />
+                            </div><div className="about__logo__container__image2">
+                                <FaNode />
+                            </div>
                             <div className="about__logo__container__image2">
                                 <SiPostgresql />
                             </div>
@@ -73,7 +82,7 @@ function About() {
                                 <SiSequelize />
                             </div>
                             <div className="about__logo__container__image2">
-                                <SiMongodb />
+                                <AiFillGitlab />
                             </div>
                         </div>
                     </div>

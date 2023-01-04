@@ -41,7 +41,7 @@ function Achievements() {
                     <div className="achivements__title">
                         <div className="achievements__presentation">
                             <div className="achievements__presentation__line"> </div>{" "}
-                            <span className="achievements__presentation__span">Mes réalisations</span>
+                            <span className="achievements__presentation__span">Mes réalisations d'études.</span>
                         </div>
                     </div>
                     <ul className="liste">
