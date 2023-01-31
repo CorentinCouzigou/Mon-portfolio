@@ -26,7 +26,10 @@ function About() {
                             <br />
                             <p>Mon ancien domaine d'exercice ma permis d'être à l'écoute des autres et à faire preuve d'adaptabilité, je suis donc à l'aise dans un environnement de travail de type méthode Agile/Scrum.</p>
                             <br />
-                            <p>Aujourd'hui je travaille au sein d'une équipe informatique dynamique chez GMS Group depuis mars 2022.</p>
+                            <p>Aujourd'hui je travaille au sein d'une équipe informatique dynamique depuis mars 2022 chez
+                                GMS Group en constant distanciel. Je souhaiterai dorénavant
+                                intégrer une équipe sur site pour regagner en contact humain tout en utilisant et développant
+                                mes compétences.</p>
                             <br />
                             <a className="about__presentation__linkedin" title="Linkedin" href="https://www.linkedin.com/in/corentin-couzigou-0b200b175/"><SiLinkedin title="Linkedin" /></a>
                         </div>
