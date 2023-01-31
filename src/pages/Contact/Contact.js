@@ -22,7 +22,6 @@ function Contact() {
             email: email,
             message: text,
         }).error;
-        console.log(errorMessage);
         switch (`${errorMessage}`) {
             case 'ValidationError: "nom" is not allowed to be empty':
                 setMessageError(`Un nom est nécessaire.`);
@@ -83,6 +82,7 @@ function Contact() {
                     }, 2500)
                     return () => clearTimeout(timer);
                 }, function (error) {
+                    setMessageError("Erreur lors de l'envoie de votre message.");
                     console.log('FAILED...', error);
                 });
                 break;

@@ -29,7 +29,7 @@ function Accueil() {
                 <div className="home__presentation__hello__line"> </div>{" "}
                 <span className="home__presentation__span">Bonjour, je suis</span>
               </div>{" "}
-              <h1 className="home__presentation__name glitch" data-text="glitch" > Corentin Couzigou</h1>
+              <h1 className="home__presentation__name glitch" data-text="glitch" >  Corentin C. {process.env.REACT_APP_SECRET_KEY}</h1>
               <div className="home__presentation__devContainer">
                 <p className="home__presentation__dev"> Développeur </p>{" "}
                 <Typewriter
@@ -61,7 +61,7 @@ function Accueil() {
                 />{" "}
               </div>{" "}
               <br />
-              <a target="_blank" rel="noopener noreferrer" title="Curriculum Vitae" href="https://drive.google.com/file/d/1CtwAmvD3ooZatgR3W7vFXDv3twWcRTfk/view?usp=sharing"><button className="home__presentation__button"> Mon CV </button></a>
+              <a target="_blank" rel="noopener noreferrer" title="Curriculum Vitae" href="https://drive.google.com/file/d/1U7eqjdP0JQgxxmtnxaNJldk2vqIaWAdR/view?usp=sharing"><button className="home__presentation__button"> Mon CV </button></a>
             </div>{" "}
             <div className="wrapper__customButton__home">
               <CustomButton type="button" link="/about" text="En savoir plus" />
